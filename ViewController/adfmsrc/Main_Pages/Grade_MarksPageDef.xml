@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Grade_MarksPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblMarksGradeView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblMarksGradeView3Iterator"/>
+    <searchRegion Binds="TblMarksGradeView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblMarksGradeView3Query"/>
+    <iterator Binds="TblGradeView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblGradeView1Iterator"/>
+    <searchRegion Binds="TblGradeView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGradeView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblMarksGradeView3Iterator" id="TblMarksGradeView3">
+      <nodeDefinition DefName="model.VO.TblMarksGradeView" Name="TblMarksGradeView30">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="GradeCode"/>
+          <Item Value="GradeValue"/>
+          <Item Value="FrPerc"/>
+          <Item Value="ToPerc"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblGradeView1Iterator" id="TblGradeView1">
+      <nodeDefinition DefName="model.VO.TblGradeView" Name="TblGradeView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="GradeName"/>
+          <Item Value="KitName"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblMarksGradeView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblMarksGradeView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblMarksGradeView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

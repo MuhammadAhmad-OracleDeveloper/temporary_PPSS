@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:h="http://java.sun.com/jsf/html">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>Header</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+     <af:panelGridLayout id="pgl1">
+    <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="34%" id="gc4"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc5"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6" halign="end"> 
+                <af:spacer width="20" height="10" id="s1"/>
+                <af:button text="Home" action="Dashboard.jsf" id="b1" icon="#{resource['images:back_to_home.png']}"/>
+                        <af:spacer width="10" height="10" id="s2"/>
+                        <af:button text="Logout"  icon="#{resource['images:logout.png']}" id="b2"/>
+                <af:spacer width="10" height="10" id="pt_s1"/>
+                
+                    </af:gridCell>
+                </af:gridRow>
+      </af:panelGridLayout>
+</af:pageTemplateDef>

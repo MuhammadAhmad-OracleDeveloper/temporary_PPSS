@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Grade_SubjectPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblSchoolTimeView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblSchoolTimeView3Iterator"/>
+    <searchRegion Binds="TblSchoolTimeView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSchoolTimeView3Query"/>
+    <iterator Binds="TblGradeView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblGradeView1Iterator"/>
+    <searchRegion Binds="TblGradeView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGradeView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblSchoolTimeView3Iterator" id="TblSchoolTimeView3">
+      <nodeDefinition DefName="model.VO.TblSchoolTimeView" Name="TblSchoolTimeView30">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="FrDate"/>
+          <Item Value="ToDate"/>
+          <Item Value="StartTime"/>
+          <Item Value="EndTime"/>
+          <Item Value="ZeroPerStartTime"/>
+          <Item Value="ZeroPerEndTime"/>
+          <Item Value="ZeroPerDuration"/>
+          <Item Value="BreakStartTime"/>
+          <Item Value="BreakEndTime"/>
+          <Item Value="NoOfPerDay"/>
+          <Item Value="PrayStartTime"/>
+          <Item Value="PrayEndTime"/>
+          <Item Value="WeeklyOff"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblGradeView1Iterator" id="TblGradeView1">
+      <nodeDefinition DefName="model.VO.TblGradeView" Name="TblGradeView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="GradeName"/>
+          <Item Value="KitName"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblSchoolTimeView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblSchoolTimeView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblSchoolTimeView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

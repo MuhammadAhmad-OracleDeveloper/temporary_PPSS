@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Academic_YearPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblAcadYearView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblAcadYearView1Iterator"/>
+    <searchRegion Binds="TblAcadYearView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblAcadYearView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblAcadYearView1Iterator" id="TblAcadYearView1">
+      <nodeDefinition DefName="model.VO.TblAcadYearView" Name="TblAcadYearView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="CompanyEntityId"/>
+          <Item Value="Name"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblAcadYearView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblAcadYearView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblAcadYearView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

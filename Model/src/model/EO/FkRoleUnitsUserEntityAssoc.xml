@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkRoleUnitsUserEntityAssoc"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="TblRoleEntity"
+    Cardinality="1"
+    Source="true"
+    Owner="model.EO.TblRoleEntity">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblRoleEntity"/>
+      <Attr Name="_foreignKey" Value="model.EO.TblRoleEntity.PkRoleEntity"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.TblRoleEntity.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TblRoleUnits"
+    Cardinality="-1"
+    Owner="model.EO.TblRoleUnits">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblRoleUnits"/>
+      <Attr Name="_foreignKey" Value="model.EO.TblRoleUnits.FkRoleUnitsUserEntity"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.TblRoleUnits.RoleEntityId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

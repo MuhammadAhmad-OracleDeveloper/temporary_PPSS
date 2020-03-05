@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblGroup"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_GROUP"
+  AliasName="TblGroup"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    ColumnName="ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_GROUP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CompanyEntityId"
+    ColumnName="COMPANY_ENTITY_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_GROUP"/>
+  <Attribute
+    Name="GroupName"
+    Precision="100"
+    ColumnName="GROUP_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_GROUP">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_GROUP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedDate"
+    ColumnName="CREATED_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="TBL_GROUP"/>
+  <Attribute
+    Name="CreatedBy"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_GROUP"/>
+  <Attribute
+    Name="UpdatedDate"
+    ColumnName="UPDATED_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="TBL_GROUP"/>
+  <Attribute
+    Name="UpdatedBy"
+    ColumnName="UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_GROUP"/>
+  <AccessorAttribute
+    Name="TblGrade"
+    Association="model.EO.FkGradeGroupAssoc"
+    AssociationEnd="model.EO.FkGradeGroupAssoc.TblGrade"
+    AssociationOtherEnd="model.EO.FkGradeGroupAssoc.TblGroup"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblCompanyEntity"
+    Association="model.EO.FkGroupEntityAssoc"
+    AssociationEnd="model.EO.FkGroupEntityAssoc.TblCompanyEntity"
+    AssociationOtherEnd="model.EO.FkGroupEntityAssoc.TblGroup"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkGroup"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_GROUP"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.TblGroup.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkGroupEntity">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_COMPANY_ENTITY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_GROUP_ENTITY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.TblGroup.CompanyEntityId"/>
+    </AttrArray>
+  </Key>
+</Entity>

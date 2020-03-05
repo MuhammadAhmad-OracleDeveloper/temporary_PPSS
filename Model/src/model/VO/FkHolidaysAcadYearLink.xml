@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkHolidaysAcadYearLink"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="model.EO.FkHolidaysAcadYearAssoc">
+  <ViewLinkDefEnd
+    Name="TblAcadYearView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.VO.TblAcadYearView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblAcadYearView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblAcadYearView.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblHolidaysView"
+    Cardinality="-1"
+    Owner="model.VO.TblHolidaysView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblHolidaysView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblHolidaysView.AcadYearId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

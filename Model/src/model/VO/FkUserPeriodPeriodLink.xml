@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkUserPeriodPeriodLink"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="model.EO.FkUserPeriodPeriodAssoc">
+  <ViewLinkDefEnd
+    Name="TblPeriodView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.VO.TblPeriodView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblPeriodView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblPeriodView.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblUserPeriodView"
+    Cardinality="-1"
+    Owner="model.VO.TblUserPeriodView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblUserPeriodView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblUserPeriodView.PeriodId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

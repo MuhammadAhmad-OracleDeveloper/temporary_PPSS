@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="General_infoPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblGenInfoMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblGenInfoMasterView1Iterator"/>
+    <searchRegion Binds="TblGenInfoMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGenInfoMasterView1Query"/>
+    <iterator Binds="TblGenInfoDetailView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblGenInfoDetailView2Iterator"/>
+    <searchRegion Binds="TblGenInfoDetailView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGenInfoDetailView2Query"/>
+    <iterator Binds="TblGenInfoDetailDView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblGenInfoDetailDView3Iterator"/>
+    <searchRegion Binds="TblGenInfoDetailDView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGenInfoDetailDView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblGenInfoMasterView1Iterator" id="TblGenInfoMasterView1">
+      <nodeDefinition DefName="model.VO.TblGenInfoMasterView" Name="TblGenInfoMasterView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblGenInfoDetailView2Iterator" id="TblGenInfoDetailView2">
+      <nodeDefinition DefName="model.VO.TblGenInfoDetailView" Name="TblGenInfoDetailView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblGenInfoDetailDView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblGenInfoDetailDView3Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblGenInfoDetailDView3Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblGenInfoDetailDView3Iterator" id="TblGenInfoDetailDView3">
+      <nodeDefinition DefName="model.VO.TblGenInfoDetailDView" Name="TblGenInfoDetailDView30">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblGenInfoDetailView2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblGenInfoDetailView2Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblGenInfoDetailView2Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action IterBinding="TblGenInfoMasterView1Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblGenInfoMasterView1Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblGenInfoMasterView1Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

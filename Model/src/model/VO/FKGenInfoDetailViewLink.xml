@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FKGenInfoDetailViewLink"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="model.EO.FkGenInfoDetailDDetailAssoc">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.VO.FKGenInfoDetailViewLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="TblGenInfoDetailView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.VO.TblGenInfoDetailView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblGenInfoDetailView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblGenInfoDetailView.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblGenInfoDetailDView1"
+    Cardinality="-1"
+    Owner="model.VO.TblGenInfoDetailDView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblGenInfoDetailDView1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.VO.TblGenInfoDetailDView.GenInfoDetailId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

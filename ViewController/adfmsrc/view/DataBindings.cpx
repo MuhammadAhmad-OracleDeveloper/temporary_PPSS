@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.57" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/Main_Pages/Academic_Year.jsf" usageId="view_Academic_YearPageDef"/>
+    <page path="/Main_Pages/Terms.jsf" usageId="view_TermsPageDef"/>
+    <page path="/Main_Pages/Terms_Working_Days.jsf" usageId="view_Terms_Working_DaysPageDef"/>
+    <page path="/Main_Pages/Academic_Holidays_List.jsf" usageId="view_Academic_Holidays_ListPageDef"/>
+    <page path="/Main_Pages/Group_Setup.jsf" usageId="view_Group_SetupPageDef"/>
+    <page path="/Main_Pages/Grade_Setup.jsf" usageId="view_Grade_SetupPageDef"/>
+    <page path="/Main_Pages/Section.jsf" usageId="view_SectionPageDef"/>
+    <page path="/Main_Pages/Adding_New_Notice.jsf" usageId="view_Adding_New_NoticePageDef"/>
+    <page path="/Main_Pages/Grade_School_Time.jsf" usageId="view_Grade_SubjectPageDef"/>
+    <page path="/Main_Pages/Grade_Subject.jsf" usageId="view_Grade_SubjectPageDef1"/>
+    <page path="/Main_Pages/Subjects.jsf" usageId="view_SubjectsPageDef"/>
+    <page path="/Main_Pages/Grade_Marks.jsf" usageId="view_Grade_MarksPageDef"/>
+    <page path="/Main_Pages/General_info.jsf" usageId="view_General_infoPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_Academic_YearPageDef" path="Main_Pages.Academic_YearPageDef"/>
+    <page id="view_TermsPageDef" path="Main_Pages.TermsPageDef"/>
+    <page id="view_Terms_Working_DaysPageDef" path="Main_Pages.Terms_Working_DaysPageDef"/>
+    <page id="view_Academic_Holidays_ListPageDef" path="Main_Pages.Academic_Holidays_ListPageDef"/>
+    <page id="view_Group_SetupPageDef" path="Main_Pages.Group_SetupPageDef"/>
+    <page id="view_Grade_SetupPageDef" path="Main_Pages.Grade_SetupPageDef"/>
+    <page id="view_SectionPageDef" path="Main_Pages.SectionPageDef"/>
+    <page id="view_Adding_New_NoticePageDef" path="Main_Pages.Adding_New_NoticePageDef"/>
+    <page id="view_Grade_SubjectPageDef" path="Main_Pages.Grade_SubjectPageDef"/>
+    <page id="view_Grade_SubjectPageDef1" path="Main_Pages.Grade_SubjectPageDef1"/>
+    <page id="view_SubjectsPageDef" path="Main_Pages.SubjectsPageDef"/>
+    <page id="view_Grade_MarksPageDef" path="Main_Pages.Grade_MarksPageDef"/>
+    <page id="view_General_infoPageDef" path="Main_Pages.General_infoPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

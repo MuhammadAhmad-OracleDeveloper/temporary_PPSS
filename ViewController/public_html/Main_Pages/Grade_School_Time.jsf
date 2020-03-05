@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Section.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="160px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                         <af:pageTemplate viewId="Header.jsf" id="pt1">
+                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                        </af:pageTemplate>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
+                            <f:facet name="first">
+                                <!-- Left -->
+                                <af:pageTemplate viewId="SideBar.jsf" id="pt5">
+                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                        </af:pageTemplate>
+                       
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelTabbed position="above" id="pt4">
+                                    <af:showDetailItem id="sdi1" text="Grade School Time">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
+                                                    <af:panelTabbed position="above" id="pt2">
+                                                        <af:showDetailItem id="tab2" text="Grade">
+                                                            <af:table value="#{bindings.TblGradeView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblGradeView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblGradeView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblGradeView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblGradeView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblGradeView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblGradeView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblGradeView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1" width="545">
+                                                                <af:column sortProperty="#{bindings.TblGradeView1.hints.Id.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Grade ID"
+                                                                           id="c1" align="center">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                    id="id4" placeholder="Search ID">
+                                                                                    </af:inputText>
+                                                                                    </f:facet> 
+                                                                    <af:inputText value="#{row.bindings.Id.inputValue}"
+                                                                                  label="#{bindings.TblGradeView1.hints.Id.label}"
+                                                                                  required="#{bindings.TblGradeView1.hints.Id.mandatory}"
+                                                                                  columns="#{bindings.TblGradeView1.hints.Id.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblGradeView1.hints.Id.precision}"
+                                                                                  shortDesc="#{bindings.TblGradeView1.hints.Id.tooltip}"
+                                                                                  id="it1" readOnly="true"
+                                                                                    contentStyle='text-align: center'>
+                                                                        <f:validator binding="#{row.bindings.Id.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblGradeView1.hints.Id.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblGradeView1.hints.GradeName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Grade Name"
+                                                                           id="c2">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.GradeName}"
+                                                                                    id="it8" placeholder="Search Grade">
+                                                                                    </af:inputText>
+                                                                                    </f:facet> 
+                                                                    <af:inputText value="#{row.bindings.GradeName.inputValue}"
+                                                                                  label="#{bindings.TblGradeView1.hints.GradeName.label}"
+                                                                                  required="#{bindings.TblGradeView1.hints.GradeName.mandatory}"
+                                                                                  columns="#{bindings.TblGradeView1.hints.GradeName.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblGradeView1.hints.GradeName.precision}"
+                                                                                  shortDesc="#{bindings.TblGradeView1.hints.GradeName.tooltip}"
+                                                                                  id="it2" readOnly="true">
+                                                                        <f:validator binding="#{row.bindings.GradeName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblGradeView1.hints.KitName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Kit"
+                                                                           id="c3">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.KitName}"
+                                                                                    id="it9" placeholder="Search Kit">
+                                                                                    </af:inputText>
+                                                                                    </f:facet> 
+                                                                    <af:inputText value="#{row.bindings.KitName.inputValue}"
+                                                                                  label="#{bindings.TblGradeView1.hints.KitName.label}"
+                                                                                  required="#{bindings.TblGradeView1.hints.KitName.mandatory}"
+                                                                                  columns="#{bindings.TblGradeView1.hints.KitName.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblGradeView1.hints.KitName.precision}"
+                                                                                  shortDesc="#{bindings.TblGradeView1.hints.KitName.tooltip}"
+                                                                                  id="it3" readOnly="true">
+                                                                        <f:validator binding="#{row.bindings.KitName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblGradeView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c4">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                    id="it7" placeholder="Search Status">
+                                                                                    </af:inputText>
+                                                                                    </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblGradeView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblGradeView1.hints.Ast.tooltip}"
+                                                                                        id="soc1" readOnly="true">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:panelTabbed position="above" id="pt3">
+                                                        <af:showDetailItem id="tab3" text="Grade School Time">
+                                                            <af:panelGroupLayout id="pgl3"/>
+                                                            <af:table value="#{bindings.TblSchoolTimeView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblSchoolTimeView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblSchoolTimeView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblSchoolTimeView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblSchoolTimeView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblSchoolTimeView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblSchoolTimeView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblSchoolTimeView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2">
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.Id.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="School Time ID"
+                                                                           id="c5">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                    id="it12" placeholder="Search Time ID">
+                                                                                    </af:inputText>
+                                                                                    </f:facet>
+                                                                    <af:inputText value="#{row.bindings.Id.inputValue}"
+                                                                                  label="For Date"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.Id.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.Id.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSchoolTimeView3.hints.Id.precision}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.Id.tooltip}"
+                                                                                  id="it4" readOnly="true">
+                                                                        <f:validator binding="#{row.bindings.Id.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblSchoolTimeView3.hints.Id.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.FrDate.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="For Date"
+                                                                           id="c6">
+                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.FrDate.value}"
+                                                                                      id="id1" placeholder="Search For Date">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.FrDate.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.FrDate.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.FrDate.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.FrDate.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.FrDate.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.FrDate.tooltip}"
+                                                                                  id="id2">
+                                                                        <f:validator binding="#{row.bindings.FrDate.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.FrDate.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.ToDate.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           id="c7" headerText="To Date">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ToDate.value}"
+                                                                                      id="id3" placeholder="Search To Date">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ToDate.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.ToDate.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.ToDate.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.ToDate.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.ToDate.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.ToDate.tooltip}"
+                                                                                  id="id5">
+                                                                        <f:validator binding="#{row.bindings.ToDate.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ToDate.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.StartTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Start Time"
+                                                                           id="c8">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartTime.value}"
+                                                                                      id="id6" placeholder="Search Start Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.StartTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.StartTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.StartTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.StartTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.StartTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.StartTime.tooltip}"
+                                                                                  id="id7">
+                                                                        <f:validator binding="#{row.bindings.StartTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.StartTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.EndTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="End Time"
+                                                                           id="c9">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndTime.value}"
+                                                                                      id="id8" placeholder="Search End Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.EndTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.EndTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.EndTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.EndTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.EndTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.EndTime.tooltip}"
+                                                                                  id="id9">
+                                                                        <f:validator binding="#{row.bindings.EndTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.EndTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Zero Period Start Time"
+                                                                           id="c10" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ZeroPerStartTime.value}"
+                                                                                      id="id10" placeholder="Search Zero Period Start Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.ZeroPerStartTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.tooltip}"
+                                                                                  id="id11">
+                                                                        <f:validator binding="#{row.bindings.ZeroPerStartTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ZeroPerStartTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Zero Period End Time"
+                                                                           id="c11" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ZeroPerEndTime.value}"
+                                                                                      id="id12" placeholder="Search Zero Period End Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.ZeroPerEndTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.tooltip}"
+                                                                                  id="id13">
+                                                                        <f:validator binding="#{row.bindings.ZeroPerEndTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.ZeroPerEndTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Zero Period Duration"
+                                                                           id="c12" align="center">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.ZeroPerDuration}"
+                                                                               id="it13" placeholder="Search Zero Period Duration">
+                                                                              </af:inputText>
+                                                                        </f:facet>
+
+                                                                    <af:inputText value="#{row.bindings.ZeroPerDuration.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.precision}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.ZeroPerDuration.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblSchoolTimeView3.hints.ZeroPerDuration.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Break Start Time"
+                                                                           id="c13" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.BreakStartTime.value}"
+                                                                                      id="id14" placeholder="Search Break Start Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.BreakStartTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.tooltip}"
+                                                                                  id="id15">
+                                                                        <f:validator binding="#{row.bindings.BreakStartTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.BreakStartTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Break End Time"
+                                                                           id="c14" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.BreakEndTime.value}"
+                                                                                      id="id16" placeholder="Search Break End Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.BreakEndTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.tooltip}"
+                                                                                  id="id17">
+                                                                        <f:validator binding="#{row.bindings.BreakEndTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.BreakEndTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="No. Of Periods in a Day"
+                                                                           id="c15" align="center">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.NoOfPerDay}"
+                                                                               id="it14" placeholder="Search No. of Periods in a Day">
+                                                                              </af:inputText>
+                                                                        </f:facet>
+
+                                                                    <af:inputText value="#{row.bindings.NoOfPerDay.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.precision}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.NoOfPerDay.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblSchoolTimeView3.hints.NoOfPerDay.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Prayer Break Start Time"
+                                                                           id="c16" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.PrayStartTime.value}"
+                                                                                      id="id18" placeholder="Search Prayer Break Start Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.PrayStartTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.tooltip}"
+                                                                                  id="id19">
+                                                                        <f:validator binding="#{row.bindings.PrayStartTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.PrayStartTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Prayer Break End Time"
+                                                                           id="c17" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSchoolTimeView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.PrayEndTime.value}"
+                                                                                      id="id20" placeholder="Search Prayer Break End Time">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.PrayEndTime.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.tooltip}"
+                                                                                  id="id21">
+                                                                        <f:validator binding="#{row.bindings.PrayEndTime.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSchoolTimeView3.hints.PrayEndTime.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Weekly Off"
+                                                                           id="c18">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.WeeklyOff}"
+                                                                               id="it15" placeholder="Search Weekly Off">
+                                                                              </af:inputText>
+                                                                        </f:facet>
+
+                                                                    <af:inputText value="#{row.bindings.WeeklyOff.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.precision}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.WeeklyOff.tooltip}"
+                                                                                  id="it10">
+                                                                        <f:validator binding="#{row.bindings.WeeklyOff.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSchoolTimeView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c19">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblSchoolTimeView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblSchoolTimeView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblSchoolTimeView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSchoolTimeView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblSchoolTimeView3.hints.Ast.tooltip}"
+                                                                                  id="it11">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
+                                                    <af:panelGroupLayout id="pgl4"/>
+                                                    <af:spacer width="50" height="10" id="s8"/>
+                                                    <af:button
+                                                               text="Add"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9"
+                                                               icon="#{resource['images:add.png']}"
+                                                               actionListener="#{bindings.CreateInsert.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s9"/>
+                                                    <af:button
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b10" icon="#{resource['images:edit.png']}"
+                                                               actionListener="#{bindings.Execute.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s10"/>
+                                                    <af:button text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b11"
+                                                               icon="#{resource['images:delete.png']}"
+                                                               actionListener="#{bindings.Delete.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s11"/>
+                                                    <af:button text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b12"
+                                                               icon="#{resource['images:save.png']}"
+                                                               actionListener="#{bindings.Commit.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s12"/>
+                                                    <af:button
+                                                               text="Cancel" disabled="#{!bindings.Rollback.enabled}" id="b13"
+                                                               icon="#{resource['images:cancel.png']}"
+                                                               actionListener="#{bindings.Rollback.execute}"
+                                                               immediate="true">
+                                                        <af:resetActionListener/>
+                                                    </af:button>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelTabbed>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
