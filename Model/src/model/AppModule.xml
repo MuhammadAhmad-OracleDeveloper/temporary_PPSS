@@ -259,6 +259,33 @@
   <ViewUsage
     Name="TblGenInfoDetailDView3"
     ViewObjectName="model.VO.TblGenInfoDetailDView"/>
+  <ViewUsage
+    Name="TblGradeEvaluationView1"
+    ViewObjectName="model.VO.TblGradeEvaluationView"/>
+  <ViewUsage
+    Name="TblAgePolicyView1"
+    ViewObjectName="model.VO.TblAgePolicyView"/>
+  <ViewUsage
+    Name="TblEnqFollowUpView1"
+    ViewObjectName="model.VO.TblEnqFollowUpView"/>
+  <ViewUsage
+    Name="TblStdRegGuardView1"
+    ViewObjectName="model.VO.TblStdRegGuardView"/>
+  <ViewUsage
+    Name="TblStdRegSibView1"
+    ViewObjectName="model.VO.TblStdRegSibView"/>
+  <ViewUsage
+    Name="TblStdRegView1"
+    ViewObjectName="model.VO.TblStdRegView"/>
+  <ViewUsage
+    Name="TblStdRegGuardView2"
+    ViewObjectName="model.VO.TblStdRegGuardView"/>
+  <ViewUsage
+    Name="TblStdRegSibView2"
+    ViewObjectName="model.VO.TblStdRegSibView"/>
+  <ViewUsage
+    Name="TblStdRegSibView3"
+    ViewObjectName="model.VO.TblStdRegSibView"/>
   <ViewLinkUsage
     Name="FkAcadYearCoEntityLink1"
     ViewLinkObjectName="model.VO.FkAcadYearCoEntityLink"
@@ -570,5 +597,23 @@
     ViewLinkObjectName="model.VO.FkGenInfoDetailDDetailLink"
     SrcViewUsageName="model.AppModule.TblGenInfoDetailView2"
     DstViewUsageName="model.AppModule.TblGenInfoDetailDView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkStdRegGuardRegLink1"
+    ViewLinkObjectName="model.VO.FkStdRegGuardRegLink"
+    SrcViewUsageName="model.AppModule.TblStdRegView1"
+    DstViewUsageName="model.AppModule.TblStdRegGuardView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkStdRegSibRegLink1"
+    ViewLinkObjectName="model.VO.FkStdRegSibRegLink"
+    SrcViewUsageName="model.AppModule.TblStdRegView1"
+    DstViewUsageName="model.AppModule.TblStdRegSibView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkStdRegSibSibLink1"
+    ViewLinkObjectName="model.VO.FkStdRegSibSibLink"
+    SrcViewUsageName="model.AppModule.TblStdRegView1"
+    DstViewUsageName="model.AppModule.TblStdRegSibView3"
     Reversed="false"/>
 </AppModule>
