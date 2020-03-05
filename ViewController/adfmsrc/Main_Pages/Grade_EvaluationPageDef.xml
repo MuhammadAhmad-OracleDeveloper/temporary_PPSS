@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Grade_EvaluationPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblGradeEvaluationView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblGradeEvaluationView1Iterator"/>
+    <searchRegion Binds="TblGradeEvaluationView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGradeEvaluationView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblGradeEvaluationView1Iterator" id="TblGradeEvaluationView1">
+      <nodeDefinition DefName="model.VO.TblGradeEvaluationView" Name="TblGradeEvaluationView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="GradeId"/>
+          <Item Value="TermId"/>
+          <Item Value="InfoEvaluation"/>
+          <Item Value="InfoDTopic1"/>
+          <Item Value="Topic1Marks"/>
+          <Item Value="InfoDTopic2"/>
+          <Item Value="Topic2Marks"/>
+          <Item Value="EvaType"/>
+          <Item Value="TotalMarks"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblGradeEvaluationView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblGradeEvaluationView1Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblGradeEvaluationView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

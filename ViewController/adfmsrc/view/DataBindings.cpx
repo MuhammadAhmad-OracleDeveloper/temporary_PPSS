@@ -15,6 +15,7 @@
     <page path="/Main_Pages/Subjects.jsf" usageId="view_SubjectsPageDef"/>
     <page path="/Main_Pages/Grade_Marks.jsf" usageId="view_Grade_MarksPageDef"/>
     <page path="/Main_Pages/General_info.jsf" usageId="view_General_infoPageDef"/>
+    <page path="/Main_Pages/Grade_Evaluation.jsf" usageId="view_Grade_EvaluationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_Academic_YearPageDef" path="Main_Pages.Academic_YearPageDef"/>
@@ -30,6 +31,7 @@
     <page id="view_SubjectsPageDef" path="Main_Pages.SubjectsPageDef"/>
     <page id="view_Grade_MarksPageDef" path="Main_Pages.Grade_MarksPageDef"/>
     <page id="view_General_infoPageDef" path="Main_Pages.General_infoPageDef"/>
+    <page id="view_Grade_EvaluationPageDef" path="Main_Pages.Grade_EvaluationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
