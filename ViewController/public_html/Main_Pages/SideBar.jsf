@@ -39,6 +39,10 @@
                                     <af:button text="General Info" id="pt_b2" inlineStyle="width:200px;text-align:center " action="General_info.jsf"/>
                                     <af:spacer width="50" height="10" id="pt_s3"/>
                                     <af:button text="Grade Evaluation" id="pt_b3" inlineStyle="width:200px;text-align:center " action="Grade_Evaluation.jsf"/>
-                                </af:showDetailItem>
+                                    <af:spacer width="50" height="10" id="pt_s4"/>
+                                    <af:button text="Student Enquiry" id="pt_b4" inlineStyle="width:200px;text-align:center " action="Student_Enquiry.jsf"/>
+                                    <af:spacer width="50" height="10" id="pt_s5"/>
+                                    <af:button text="Age Policy" id="pt_b5" inlineStyle="width:200px;text-align:center " action="Age_Policy.jsf"/>
+        </af:showDetailItem>
                                 </af:panelAccordion>
 </af:pageTemplateDef>

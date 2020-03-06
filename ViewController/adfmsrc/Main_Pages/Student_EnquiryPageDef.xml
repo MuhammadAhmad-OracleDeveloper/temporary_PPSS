@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Student_EnquiryPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblStdEnqView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblStdEnqView1Iterator"/>
+    <searchRegion Binds="TblStdEnqView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblStdEnqView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblStdEnqView1Iterator" id="TblStdEnqView1">
+      <nodeDefinition DefName="model.VO.TblStdEnqView" Name="TblStdEnqView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Dated"/>
+          <Item Value="AcadYearId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="GradeId"/>
+          <Item Value="Gender"/>
+          <Item Value="Dob"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblStdEnqView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblStdEnqView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblStdEnqView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="TotAge">
+      <AttrNames>
+        <Item Value="TotAge"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="ConPerson">
+      <AttrNames>
+        <Item Value="ConPerson"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="ContactNumber">
+      <AttrNames>
+        <Item Value="ContactNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="ContactRelation">
+      <AttrNames>
+        <Item Value="ContactRelation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="PassExpDate">
+      <AttrNames>
+        <Item Value="PassExpDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="VisaExpDate">
+      <AttrNames>
+        <Item Value="VisaExpDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="EmidExpDate">
+      <AttrNames>
+        <Item Value="EmidExpDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="JoinPerc">
+      <AttrNames>
+        <Item Value="JoinPerc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="MarksObtPerc">
+      <AttrNames>
+        <Item Value="MarksObtPerc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="Emirates">
+      <AttrNames>
+        <Item Value="Emirates"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="EmArea">
+      <AttrNames>
+        <Item Value="EmArea"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="TransReq">
+      <AttrNames>
+        <Item Value="TransReq"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="SpecialNeed">
+      <AttrNames>
+        <Item Value="SpecialNeed"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="SpecialDesc">
+      <AttrNames>
+        <Item Value="SpecialDesc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="BirthPlace">
+      <AttrNames>
+        <Item Value="BirthPlace"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoBirthCountry">
+      <AttrNames>
+        <Item Value="InfoBirthCountry"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoNationality">
+      <AttrNames>
+        <Item Value="InfoNationality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoReligion">
+      <AttrNames>
+        <Item Value="InfoReligion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoBloodGroup">
+      <AttrNames>
+        <Item Value="InfoBloodGroup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoMotherTounge">
+      <AttrNames>
+        <Item Value="InfoMotherTounge"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoSecondLang">
+      <AttrNames>
+        <Item Value="InfoSecondLang"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoThirdLang">
+      <AttrNames>
+        <Item Value="InfoThirdLang"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="EsisRef">
+      <AttrNames>
+        <Item Value="EsisRef"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="AppliedNo">
+      <AttrNames>
+        <Item Value="AppliedNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="InfoRefBy">
+      <AttrNames>
+        <Item Value="InfoRefBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="RefDesc">
+      <AttrNames>
+        <Item Value="RefDesc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherName">
+      <AttrNames>
+        <Item Value="FatherName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherOccup">
+      <AttrNames>
+        <Item Value="FatherOccup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherMobile">
+      <AttrNames>
+        <Item Value="FatherMobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherEmail">
+      <AttrNames>
+        <Item Value="FatherEmail"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherHomeTel">
+      <AttrNames>
+        <Item Value="FatherHomeTel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="FatherOffTel">
+      <AttrNames>
+        <Item Value="FatherOffTel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="MotherName">
+      <AttrNames>
+        <Item Value="MotherName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="MotherOccup">
+      <AttrNames>
+        <Item Value="MotherOccup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="MotherMobile">
+      <AttrNames>
+        <Item Value="MotherMobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="Ast">
+      <AttrNames>
+        <Item Value="Ast"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="CreatedBy">
+      <AttrNames>
+        <Item Value="CreatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="UpdatedDate">
+      <AttrNames>
+        <Item Value="UpdatedDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblStdEnqView1Iterator" id="UpdatedBy">
+      <AttrNames>
+        <Item Value="UpdatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TblStdEnqView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblStdEnqView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblStdEnqView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblStdEnqView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>
