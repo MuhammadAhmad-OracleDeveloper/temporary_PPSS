@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Follow_UpPageDef"
+                Package="Main_Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblEnqFollowUpView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblEnqFollowUpView1Iterator"/>
+    <searchRegion Binds="TblEnqFollowUpView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblEnqFollowUpView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblEnqFollowUpView1Iterator" id="TblEnqFollowUpView1">
+      <nodeDefinition DefName="model.VO.TblEnqFollowUpView" Name="TblEnqFollowUpView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Dated"/>
+          <Item Value="FollowMethod"/>
+          <Item Value="StdInqId"/>
+          <Item Value="SmsToType"/>
+          <Item Value="SmsContactNo"/>
+          <Item Value="SmsText"/>
+          <Item Value="EmailToType"/>
+          <Item Value="EmailTo"/>
+          <Item Value="EmailSubject"/>
+          <Item Value="EmailBody"/>
+          <Item Value="CallToType"/>
+          <Item Value="CallContactNo"/>
+          <Item Value="CallContent"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblEnqFollowUpView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblEnqFollowUpView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblEnqFollowUpView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

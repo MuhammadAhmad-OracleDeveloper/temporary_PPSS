@@ -47,15 +47,20 @@
                                                                       partialTriggers="::b1 ::b2 ::b3 ::b6 ::b7 ::b8 ::b9">
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.Id.label}"
-                                                                           id="c1">
+                                                                           headerText="Enquiry ID"
+                                                                           id="c1" align="center">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                               id="id4" placeholder="Search ID">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.Id.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.Id.mandatory}"
                                                                                   columns="#{bindings.TblStdEnqView1.hints.Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblStdEnqView1.hints.Id.precision}"
                                                                                   shortDesc="#{bindings.TblStdEnqView1.hints.Id.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblStdEnqView1.hints.Id.format}"/>
@@ -63,8 +68,9 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.Dated.label}"
+                                                                           headerText="Date"
                                                                            id="c2">
+                                                                           
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblStdEnqView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                                       id="id1">
@@ -83,8 +89,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.AcadYearId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.AcadYearId.label}"
+                                                                           headerText="Academic Year"
                                                                            id="c3">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.AcadYearId}"
+                                                                               id="it38" placeholder="Search Academic Year">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.AcadYearId.inputValue}"
                                                                                         label="#{row.bindings.AcadYearId.label}"
                                                                                         required="#{bindings.TblStdEnqView1.hints.AcadYearId.mandatory}"
@@ -97,8 +108,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.FirstName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.FirstName.label}"
+                                                                           headerText="First Name"
                                                                            id="c4">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.FirstName}"
+                                                                               id="it39" placeholder="Search First Name">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:inputText value="#{row.bindings.FirstName.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.FirstName.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.FirstName.mandatory}"
@@ -111,8 +127,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.LastName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.LastName.label}"
+                                                                           headerText="Last Name"
                                                                            id="c7">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.LastName}"
+                                                                               id="it40" placeholder="Search Last Name">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:inputText value="#{row.bindings.LastName.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.LastName.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.LastName.mandatory}"
@@ -125,8 +146,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.GradeId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.GradeId.label}"
+                                                                           headerText="Grade"
                                                                            id="c8">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.GradeId}"
+                                                                               id="it41" placeholder="Search Grade">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.GradeId.inputValue}"
                                                                                         label="#{row.bindings.GradeId.label}"
                                                                                         required="#{bindings.TblStdEnqView1.hints.GradeId.mandatory}"
@@ -139,8 +165,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Gender.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.Gender.label}"
+                                                                           headerText="Gender"
                                                                            id="c9">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Gender}"
+                                                                               id="it42" placeholder="Search Gender">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:inputText value="#{row.bindings.Gender.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.Gender.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.Gender.mandatory}"
@@ -153,7 +184,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Dob.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblStdEnqView1.hints.Dob.label}"
+                                                                           headerText="Date Of Birth"
                                                                            id="c10">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblStdEnqView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dob.value}"
@@ -166,7 +197,7 @@
                                                                                   required="#{bindings.TblStdEnqView1.hints.Dob.mandatory}"
                                                                                   columns="#{bindings.TblStdEnqView1.hints.Dob.displayWidth}"
                                                                                   shortDesc="#{bindings.TblStdEnqView1.hints.Dob.tooltip}"
-                                                                                  id="id4">
+                                                                                  id="id9">
                                                                         <f:validator binding="#{row.bindings.Dob.validator}"/>
                                                                         <af:convertDateTime pattern="#{bindings.TblStdEnqView1.hints.Dob.format}"/>
                                                                     </af:inputDate>
@@ -214,9 +245,9 @@
                                                     <af:panelTabbed position="above" id="pt3">
                                                         <af:showDetailItem id="tab3" text="Student Enquiry">
                                                             <af:panelGroupLayout id="pgl3"/>
-                                                            <af:panelFormLayout id="pfl1" maxColumns="3" rows="10">
+                                                            <af:panelFormLayout id="pfl1">
                                                                 <af:inputDate value="#{bindings.TotAge.inputValue}"
-                                                                              label="#{bindings.TotAge.hints.label}"
+                                                                              label="Total Age"
                                                                               required="#{bindings.TotAge.hints.mandatory}"
                                                                               columns="#{bindings.TotAge.hints.displayWidth}"
                                                                               shortDesc="#{bindings.TotAge.hints.tooltip}"
@@ -225,16 +256,17 @@
                                                                     <af:convertDateTime pattern="#{bindings.TotAge.format}"/>
                                                                 </af:inputDate>
                                                                 <af:inputText value="#{bindings.ConPerson.inputValue}"
-                                                                              label="#{bindings.ConPerson.hints.label}"
+                                                                              label="Contact Person"
                                                                               required="#{bindings.ConPerson.hints.mandatory}"
                                                                               columns="#{bindings.ConPerson.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ConPerson.hints.precision}"
                                                                               shortDesc="#{bindings.ConPerson.hints.tooltip}"
                                                                               id="it4">
+                                                                              
                                                                     <f:validator binding="#{bindings.ConPerson.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ContactNumber.inputValue}"
-                                                                              label="#{bindings.ContactNumber.hints.label}"
+                                                                              label="Contact Number"
                                                                               required="#{bindings.ContactNumber.hints.mandatory}"
                                                                               columns="#{bindings.ContactNumber.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ContactNumber.hints.precision}"
@@ -243,62 +275,13 @@
                                                                     <f:validator binding="#{bindings.ContactNumber.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ContactRelation.inputValue}"
-                                                                              label="#{bindings.ContactRelation.hints.label}"
+                                                                              label="Contact Relation"
                                                                               required="#{bindings.ContactRelation.hints.mandatory}"
                                                                               columns="#{bindings.ContactRelation.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ContactRelation.hints.precision}"
                                                                               shortDesc="#{bindings.ContactRelation.hints.tooltip}"
                                                                               id="it7">
                                                                     <f:validator binding="#{bindings.ContactRelation.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputDate value="#{bindings.PassExpDate.inputValue}"
-                                                                              label="#{bindings.PassExpDate.hints.label}"
-                                                                              required="#{bindings.PassExpDate.hints.mandatory}"
-                                                                              columns="#{bindings.PassExpDate.hints.displayWidth}"
-                                                                              shortDesc="#{bindings.PassExpDate.hints.tooltip}"
-                                                                              id="id6">
-                                                                    <f:validator binding="#{bindings.PassExpDate.validator}"/>
-                                                                    <af:convertDateTime pattern="#{bindings.PassExpDate.format}"/>
-                                                                </af:inputDate>
-                                                                <af:inputDate value="#{bindings.VisaExpDate.inputValue}"
-                                                                              label="#{bindings.VisaExpDate.hints.label}"
-                                                                              required="#{bindings.VisaExpDate.hints.mandatory}"
-                                                                              columns="#{bindings.VisaExpDate.hints.displayWidth}"
-                                                                              shortDesc="#{bindings.VisaExpDate.hints.tooltip}"
-                                                                              id="id7">
-                                                                    <f:validator binding="#{bindings.VisaExpDate.validator}"/>
-                                                                    <af:convertDateTime pattern="#{bindings.VisaExpDate.format}"/>
-                                                                </af:inputDate>
-                                                                <af:inputDate value="#{bindings.EmidExpDate.inputValue}"
-                                                                              label="#{bindings.EmidExpDate.hints.label}"
-                                                                              required="#{bindings.EmidExpDate.hints.mandatory}"
-                                                                              columns="#{bindings.EmidExpDate.hints.displayWidth}"
-                                                                              shortDesc="#{bindings.EmidExpDate.hints.tooltip}"
-                                                                              id="id8">
-                                                                    <f:validator binding="#{bindings.EmidExpDate.validator}"/>
-                                                                    <af:convertDateTime pattern="#{bindings.EmidExpDate.format}"/>
-                                                                </af:inputDate>
-                                                                <af:inputText value="#{bindings.JoinPerc.inputValue}"
-                                                                              label="#{bindings.JoinPerc.hints.label}"
-                                                                              required="#{bindings.JoinPerc.hints.mandatory}"
-                                                                              columns="#{bindings.JoinPerc.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.JoinPerc.hints.precision}"
-                                                                              shortDesc="#{bindings.JoinPerc.hints.tooltip}"
-                                                                              id="it8">
-                                                                    <f:validator binding="#{bindings.JoinPerc.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.JoinPerc.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.MarksObtPerc.inputValue}"
-                                                                              label="#{bindings.MarksObtPerc.hints.label}"
-                                                                              required="#{bindings.MarksObtPerc.hints.mandatory}"
-                                                                              columns="#{bindings.MarksObtPerc.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.MarksObtPerc.hints.precision}"
-                                                                              shortDesc="#{bindings.MarksObtPerc.hints.tooltip}"
-                                                                              id="it9">
-                                                                    <f:validator binding="#{bindings.MarksObtPerc.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.MarksObtPerc.format}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Address.inputValue}"
                                                                               label="#{bindings.Address.hints.label}"
@@ -310,7 +293,7 @@
                                                                     <f:validator binding="#{bindings.Address.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Emirates.inputValue}"
-                                                                              label="#{bindings.Emirates.hints.label}"
+                                                                              label="Emirate's State"
                                                                               required="#{bindings.Emirates.hints.mandatory}"
                                                                               columns="#{bindings.Emirates.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Emirates.hints.precision}"
@@ -319,7 +302,7 @@
                                                                     <f:validator binding="#{bindings.Emirates.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.EmArea.inputValue}"
-                                                                              label="#{bindings.EmArea.hints.label}"
+                                                                              label="Emirate's Area"
                                                                               required="#{bindings.EmArea.hints.mandatory}"
                                                                               columns="#{bindings.EmArea.hints.displayWidth}"
                                                                               maximumLength="#{bindings.EmArea.hints.precision}"
@@ -327,240 +310,8 @@
                                                                               id="it12">
                                                                     <f:validator binding="#{bindings.EmArea.validator}"/>
                                                                 </af:inputText>
-                                                                <af:inputText value="#{bindings.TransReq.inputValue}"
-                                                                              label="#{bindings.TransReq.hints.label}"
-                                                                              required="#{bindings.TransReq.hints.mandatory}"
-                                                                              columns="#{bindings.TransReq.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.TransReq.hints.precision}"
-                                                                              shortDesc="#{bindings.TransReq.hints.tooltip}"
-                                                                              id="it13">
-                                                                    <f:validator binding="#{bindings.TransReq.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.SpecialNeed.inputValue}"
-                                                                              label="#{bindings.SpecialNeed.hints.label}"
-                                                                              required="#{bindings.SpecialNeed.hints.mandatory}"
-                                                                              columns="#{bindings.SpecialNeed.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.SpecialNeed.hints.precision}"
-                                                                              shortDesc="#{bindings.SpecialNeed.hints.tooltip}"
-                                                                              id="it14">
-                                                                    <f:validator binding="#{bindings.SpecialNeed.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.SpecialDesc.inputValue}"
-                                                                              label="#{bindings.SpecialDesc.hints.label}"
-                                                                              required="#{bindings.SpecialDesc.hints.mandatory}"
-                                                                              columns="#{bindings.SpecialDesc.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.SpecialDesc.hints.precision}"
-                                                                              shortDesc="#{bindings.SpecialDesc.hints.tooltip}"
-                                                                              id="it15">
-                                                                    <f:validator binding="#{bindings.SpecialDesc.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.BirthPlace.inputValue}"
-                                                                              label="#{bindings.BirthPlace.hints.label}"
-                                                                              required="#{bindings.BirthPlace.hints.mandatory}"
-                                                                              columns="#{bindings.BirthPlace.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.BirthPlace.hints.precision}"
-                                                                              shortDesc="#{bindings.BirthPlace.hints.tooltip}"
-                                                                              id="it16">
-                                                                    <f:validator binding="#{bindings.BirthPlace.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoBirthCountry.inputValue}"
-                                                                              label="#{bindings.InfoBirthCountry.hints.label}"
-                                                                              required="#{bindings.InfoBirthCountry.hints.mandatory}"
-                                                                              columns="#{bindings.InfoBirthCountry.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoBirthCountry.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoBirthCountry.hints.tooltip}"
-                                                                              id="it17">
-                                                                    <f:validator binding="#{bindings.InfoBirthCountry.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoBirthCountry.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoNationality.inputValue}"
-                                                                              label="#{bindings.InfoNationality.hints.label}"
-                                                                              required="#{bindings.InfoNationality.hints.mandatory}"
-                                                                              columns="#{bindings.InfoNationality.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoNationality.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoNationality.hints.tooltip}"
-                                                                              id="it18">
-                                                                    <f:validator binding="#{bindings.InfoNationality.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoNationality.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoReligion.inputValue}"
-                                                                              label="#{bindings.InfoReligion.hints.label}"
-                                                                              required="#{bindings.InfoReligion.hints.mandatory}"
-                                                                              columns="#{bindings.InfoReligion.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoReligion.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoReligion.hints.tooltip}"
-                                                                              id="it19">
-                                                                    <f:validator binding="#{bindings.InfoReligion.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoReligion.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoBloodGroup.inputValue}"
-                                                                              label="#{bindings.InfoBloodGroup.hints.label}"
-                                                                              required="#{bindings.InfoBloodGroup.hints.mandatory}"
-                                                                              columns="#{bindings.InfoBloodGroup.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoBloodGroup.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoBloodGroup.hints.tooltip}"
-                                                                              id="it20">
-                                                                    <f:validator binding="#{bindings.InfoBloodGroup.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoBloodGroup.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoMotherTounge.inputValue}"
-                                                                              label="#{bindings.InfoMotherTounge.hints.label}"
-                                                                              required="#{bindings.InfoMotherTounge.hints.mandatory}"
-                                                                              columns="#{bindings.InfoMotherTounge.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoMotherTounge.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoMotherTounge.hints.tooltip}"
-                                                                              id="it21">
-                                                                    <f:validator binding="#{bindings.InfoMotherTounge.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoMotherTounge.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoSecondLang.inputValue}"
-                                                                              label="#{bindings.InfoSecondLang.hints.label}"
-                                                                              required="#{bindings.InfoSecondLang.hints.mandatory}"
-                                                                              columns="#{bindings.InfoSecondLang.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoSecondLang.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoSecondLang.hints.tooltip}"
-                                                                              id="it22">
-                                                                    <f:validator binding="#{bindings.InfoSecondLang.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoSecondLang.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoThirdLang.inputValue}"
-                                                                              label="#{bindings.InfoThirdLang.hints.label}"
-                                                                              required="#{bindings.InfoThirdLang.hints.mandatory}"
-                                                                              columns="#{bindings.InfoThirdLang.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoThirdLang.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoThirdLang.hints.tooltip}"
-                                                                              id="it23">
-                                                                    <f:validator binding="#{bindings.InfoThirdLang.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoThirdLang.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.EsisRef.inputValue}"
-                                                                              label="#{bindings.EsisRef.hints.label}"
-                                                                              required="#{bindings.EsisRef.hints.mandatory}"
-                                                                              columns="#{bindings.EsisRef.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.EsisRef.hints.precision}"
-                                                                              shortDesc="#{bindings.EsisRef.hints.tooltip}"
-                                                                              id="it24">
-                                                                    <f:validator binding="#{bindings.EsisRef.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.AppliedNo.inputValue}"
-                                                                              label="#{bindings.AppliedNo.hints.label}"
-                                                                              required="#{bindings.AppliedNo.hints.mandatory}"
-                                                                              columns="#{bindings.AppliedNo.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.AppliedNo.hints.precision}"
-                                                                              shortDesc="#{bindings.AppliedNo.hints.tooltip}"
-                                                                              id="it25">
-                                                                    <f:validator binding="#{bindings.AppliedNo.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.InfoRefBy.inputValue}"
-                                                                              label="#{bindings.InfoRefBy.hints.label}"
-                                                                              required="#{bindings.InfoRefBy.hints.mandatory}"
-                                                                              columns="#{bindings.InfoRefBy.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.InfoRefBy.hints.precision}"
-                                                                              shortDesc="#{bindings.InfoRefBy.hints.tooltip}"
-                                                                              id="it26">
-                                                                    <f:validator binding="#{bindings.InfoRefBy.validator}"/>
-                                                                    <af:convertNumber groupingUsed="false"
-                                                                                      pattern="#{bindings.InfoRefBy.format}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.RefDesc.inputValue}"
-                                                                              label="#{bindings.RefDesc.hints.label}"
-                                                                              required="#{bindings.RefDesc.hints.mandatory}"
-                                                                              columns="#{bindings.RefDesc.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.RefDesc.hints.precision}"
-                                                                              shortDesc="#{bindings.RefDesc.hints.tooltip}"
-                                                                              id="it27">
-                                                                    <f:validator binding="#{bindings.RefDesc.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherName.inputValue}"
-                                                                              label="#{bindings.FatherName.hints.label}"
-                                                                              required="#{bindings.FatherName.hints.mandatory}"
-                                                                              columns="#{bindings.FatherName.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherName.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherName.hints.tooltip}"
-                                                                              id="it28">
-                                                                    <f:validator binding="#{bindings.FatherName.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherOccup.inputValue}"
-                                                                              label="#{bindings.FatherOccup.hints.label}"
-                                                                              required="#{bindings.FatherOccup.hints.mandatory}"
-                                                                              columns="#{bindings.FatherOccup.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherOccup.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherOccup.hints.tooltip}"
-                                                                              id="it29">
-                                                                    <f:validator binding="#{bindings.FatherOccup.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherMobile.inputValue}"
-                                                                              label="#{bindings.FatherMobile.hints.label}"
-                                                                              required="#{bindings.FatherMobile.hints.mandatory}"
-                                                                              columns="#{bindings.FatherMobile.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherMobile.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherMobile.hints.tooltip}"
-                                                                              id="it30">
-                                                                    <f:validator binding="#{bindings.FatherMobile.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherEmail.inputValue}"
-                                                                              label="#{bindings.FatherEmail.hints.label}"
-                                                                              required="#{bindings.FatherEmail.hints.mandatory}"
-                                                                              columns="#{bindings.FatherEmail.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherEmail.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherEmail.hints.tooltip}"
-                                                                              id="it31">
-                                                                    <f:validator binding="#{bindings.FatherEmail.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherHomeTel.inputValue}"
-                                                                              label="#{bindings.FatherHomeTel.hints.label}"
-                                                                              required="#{bindings.FatherHomeTel.hints.mandatory}"
-                                                                              columns="#{bindings.FatherHomeTel.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherHomeTel.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherHomeTel.hints.tooltip}"
-                                                                              id="it32">
-                                                                    <f:validator binding="#{bindings.FatherHomeTel.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.FatherOffTel.inputValue}"
-                                                                              label="#{bindings.FatherOffTel.hints.label}"
-                                                                              required="#{bindings.FatherOffTel.hints.mandatory}"
-                                                                              columns="#{bindings.FatherOffTel.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.FatherOffTel.hints.precision}"
-                                                                              shortDesc="#{bindings.FatherOffTel.hints.tooltip}"
-                                                                              id="it33">
-                                                                    <f:validator binding="#{bindings.FatherOffTel.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.MotherName.inputValue}"
-                                                                              label="#{bindings.MotherName.hints.label}"
-                                                                              required="#{bindings.MotherName.hints.mandatory}"
-                                                                              columns="#{bindings.MotherName.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.MotherName.hints.precision}"
-                                                                              shortDesc="#{bindings.MotherName.hints.tooltip}"
-                                                                              id="it34">
-                                                                    <f:validator binding="#{bindings.MotherName.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.MotherOccup.inputValue}"
-                                                                              label="#{bindings.MotherOccup.hints.label}"
-                                                                              required="#{bindings.MotherOccup.hints.mandatory}"
-                                                                              columns="#{bindings.MotherOccup.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.MotherOccup.hints.precision}"
-                                                                              shortDesc="#{bindings.MotherOccup.hints.tooltip}"
-                                                                              id="it35">
-                                                                    <f:validator binding="#{bindings.MotherOccup.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.MotherMobile.inputValue}"
-                                                                              label="#{bindings.MotherMobile.hints.label}"
-                                                                              required="#{bindings.MotherMobile.hints.mandatory}"
-                                                                              columns="#{bindings.MotherMobile.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.MotherMobile.hints.precision}"
-                                                                              shortDesc="#{bindings.MotherMobile.hints.tooltip}"
-                                                                              id="it36">
-                                                                    <f:validator binding="#{bindings.MotherMobile.validator}"/>
-                                                                </af:inputText>
                                                                 <af:inputText value="#{bindings.Ast.inputValue}"
-                                                                              label="#{bindings.Ast.hints.label}"
+                                                                              label="Active"
                                                                               required="#{bindings.Ast.hints.mandatory}"
                                                                               columns="#{bindings.Ast.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Ast.hints.precision}"

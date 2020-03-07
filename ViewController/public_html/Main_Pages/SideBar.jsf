@@ -43,6 +43,8 @@
                                     <af:button text="Student Enquiry" id="pt_b4" inlineStyle="width:200px;text-align:center " action="Student_Enquiry.jsf"/>
                                     <af:spacer width="50" height="10" id="pt_s5"/>
                                     <af:button text="Age Policy" id="pt_b5" inlineStyle="width:200px;text-align:center " action="Age_Policy.jsf"/>
+                                    <af:spacer width="50" height="10" id="pt_s6"/>
+                                    <af:button text="Follow Up" id="pt_b6" inlineStyle="width:200px;text-align:center " action="Follow_Up.jsf"/>
         </af:showDetailItem>
                                 </af:panelAccordion>
 </af:pageTemplateDef>

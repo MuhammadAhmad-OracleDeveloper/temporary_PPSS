@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="Section.jsf" id="d1">
+    <af:document title="Grade_School_Time.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:panelGridLayout id="pgl1">
@@ -441,6 +441,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c19">
+                                                                           <f:facet name="filter">
+                                                                              <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                               id="it16" placeholder="Search Status">
+                                                                              </af:inputText>
+                                                                        </f:facet>
                                                                     <af:inputText value="#{row.bindings.Ast.inputValue}"
                                                                                   label="#{bindings.TblSchoolTimeView3.hints.Ast.label}"
                                                                                   required="#{bindings.TblSchoolTimeView3.hints.Ast.mandatory}"

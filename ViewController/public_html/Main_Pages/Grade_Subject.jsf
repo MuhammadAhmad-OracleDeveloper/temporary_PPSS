@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="Section.jsf" id="d1">
+    <af:document title="Grade_Subject.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:panelGridLayout id="pgl1">
@@ -155,8 +155,13 @@
                                                                           varStatus="vs" id="t2">
                                                                     <af:column sortProperty="#{bindings.TblGradeSubjectView3.hints.Id.name}"
                                                                                filterable="true" sortable="true"
-                                                                               headerText="#{bindings.TblGradeSubjectView3.hints.Id.label}"
+                                                                               headerText="ID"
                                                                                id="c5">
+                                                                               <f:facet name="filter">
+                                                                                  <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                   id="it5" placeholder="Search ID">
+                                                                                  </af:inputText>
+                                                                            </f:facet>
                                                                         <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                       label="#{bindings.TblGradeSubjectView3.hints.Id.label}"
                                                                                       required="#{bindings.TblGradeSubjectView3.hints.Id.mandatory}"
@@ -171,8 +176,13 @@
                                                                     </af:column>
                                                                     <af:column sortProperty="#{bindings.TblGradeSubjectView3.hints.SubjectId.name}"
                                                                                filterable="true" sortable="true"
-                                                                               headerText="#{bindings.TblGradeSubjectView3.hints.SubjectId.label}"
+                                                                               headerText="Subject"
                                                                                id="c6">
+                                                                               <f:facet name="filter">
+                                                                                  <af:inputText value="#{vs.filterCriteria.SubjectId}"
+                                                                                   id="it6" placeholder="Search Subject">
+                                                                                  </af:inputText>
+                                                                            </f:facet>
                                                                         <af:selectOneChoice value="#{row.bindings.SubjectId.inputValue}"
                                                                                             label="#{row.bindings.SubjectId.label}"
                                                                                             required="#{bindings.TblGradeSubjectView3.hints.SubjectId.mandatory}"
