@@ -598,6 +598,13 @@
     AssociationOtherEnd="model.EO.FkStdRegSibSibAssoc.TblStdReg1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblStdEnq"
+    Association="model.EO.FkTblStdRegFkAssoc"
+    AssociationEnd="model.EO.FkTblStdRegFkAssoc.TblStdEnq"
+    AssociationOtherEnd="model.EO.FkTblStdRegFkAssoc.TblStdReg"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="PkStdReg"
     PrimaryKey="true">
@@ -738,6 +745,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.TblStdReg.SectionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblStdReg">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_STD_ENQ"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_STD_REG"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.TblStdReg.StdInqId"/>
     </AttrArray>
   </Key>
 </Entity>

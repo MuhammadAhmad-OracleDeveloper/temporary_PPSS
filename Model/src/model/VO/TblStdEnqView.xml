@@ -377,4 +377,9 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblStdEnq"
     AliasName="UPDATED_BY"/>
+  <ViewLinkAccessor
+    Name="TblStdRegView"
+    ViewLink="model.VO.FkTblStdRegFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

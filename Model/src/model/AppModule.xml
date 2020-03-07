@@ -286,6 +286,12 @@
   <ViewUsage
     Name="TblStdRegSibView3"
     ViewObjectName="model.VO.TblStdRegSibView"/>
+  <ViewUsage
+    Name="TblStdEnqView13"
+    ViewObjectName="model.VO.TblStdEnqView"/>
+  <ViewUsage
+    Name="TblStdRegView2"
+    ViewObjectName="model.VO.TblStdRegView"/>
   <ViewLinkUsage
     Name="FkAcadYearCoEntityLink1"
     ViewLinkObjectName="model.VO.FkAcadYearCoEntityLink"
@@ -615,5 +621,11 @@
     ViewLinkObjectName="model.VO.FkStdRegSibSibLink"
     SrcViewUsageName="model.AppModule.TblStdRegView1"
     DstViewUsageName="model.AppModule.TblStdRegSibView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblStdRegFkLink"
+    ViewLinkObjectName="model.VO.FkTblStdRegFkLink"
+    SrcViewUsageName="model.AppModule.TblStdEnqView13"
+    DstViewUsageName="model.AppModule.TblStdRegView2"
     Reversed="false"/>
 </AppModule>
