@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Student_Registration_Menu.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="160px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                        <af:pageTemplate viewId="Header.jsf" id="pt1">
+                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                        </af:pageTemplate>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                        <af:panelTabbed position="above" id="pt2">
+                            <af:showDetailItem id="tab1" text="Menu">
+                                <af:panelGroupLayout id="pgl2">
+                                    <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
+                                        <af:spacer width="50" height="10" id="pt_s4"/>
+                                        <af:button text="Student Enquiry" id="pt_b4"
+                                                   inlineStyle="width:200px;text-align:center "
+                                                   action="Student_Enquiry.jsf"/>
+                                        <af:spacer width="50" height="10" id="pt_s7"/>
+                                        <af:button text="Student Registeration" id="pt_b7"
+                                                   inlineStyle="width:200px;text-align:center "
+                                                   action="Student_Registration.jsf"/>
+                                    </af:panelFormLayout>
+                                </af:panelGroupLayout>
+                            </af:showDetailItem>
+                        </af:panelTabbed>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

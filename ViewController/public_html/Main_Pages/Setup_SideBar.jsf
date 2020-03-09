@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>SideBar</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelAccordion discloseMany="false" id="pa4" inlineStyle=" width: 210px; ">
+        <af:showDetailItem id="tab1" text="Menu">
+            <af:spacer width="50" height="10" id="s1"/>
+            <af:button text="Academic Year" id="b1" inlineStyle="width: 200px;text-align:center;"
+                       action="Academic_Year.jsf"/>
+            <af:spacer width="50" height="10" id="s2"/>
+            <af:button text="Terms" id="b2" inlineStyle="width: 200px; text-align:center;" action="Terms.jsf"/>
+            <af:spacer width="50" height="10" id="s3"/>
+            <af:button text="Terms Working Days" inlineStyle="width: 200px; text-align:center; " id="b3"
+                       action="Terms_Working_Days.jsf"/>
+            <af:spacer width="50" height="10" id="s4"/>
+            <af:button text="Academic Holidays List" inlineStyle="width: 200px; text-align:center;" id="b4"
+                       action="Academic_Holidays_List.jsf"/>
+            <af:spacer width="50" height="10" id="s7"/>
+            <af:button text="Group Setup" id="b5" inlineStyle="width: 200px; text-align:center;"
+                       action="Group_Setup.jsf"/>
+            <af:spacer width="50" height="10" id="s5"/>
+            <af:button text="Grade Setup" id="b6" inlineStyle="width:200px; text-align:center "
+                       action="Grade_Setup.jsf"/>
+            <af:spacer width="50" height="10" id="s6"/>
+            <af:button text="Section" id="b7" inlineStyle="width:200px;text-align:center " action="Section.jsf"/>
+            <af:spacer width="50" height="10" id="s8"/>
+            <af:button text="New Notice" id="b8" inlineStyle="width:200px;text-align:center "
+                       action="Adding_New_Notice.jsf"/>
+            <af:spacer width="50" height="10" id="s9"/>
+            <af:button text="School Time" id="b9" inlineStyle="width:200px;text-align:center "
+                       action="Grade_School_Time.jsf"/>
+            <af:spacer width="50" height="10" id="s10"/>
+            <af:button text="Add Subjects" id="b10" inlineStyle="width:200px;text-align:center " action="Subjects.jsf"/>
+            <af:spacer width="50" height="10" id="s11"/>
+            <af:button text="Grade Subjects" id="b11" inlineStyle="width:200px;text-align:center "
+                       action="Grade_Subject.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s1"/>
+            <af:button text="Marks Grade" id="pt_b1" inlineStyle="width:200px;text-align:center "
+                       action="Grade_Marks.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s2"/>
+            <af:button text="General Info" id="pt_b2" inlineStyle="width:200px;text-align:center "
+                       action="General_info.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s3"/>
+            <af:button text="Grade Evaluation" id="pt_b3" inlineStyle="width:200px;text-align:center "
+                       action="Grade_Evaluation.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s5"/>
+            <af:button text="Age Policy" id="pt_b5" inlineStyle="width:200px;text-align:center "
+                       action="Age_Policy.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s6"/>
+            <af:button text="Follow Up" id="pt_b6" inlineStyle="width:200px;text-align:center " action="Follow_Up.jsf"/>
+        </af:showDetailItem>
+    </af:panelAccordion>
+</af:pageTemplateDef>

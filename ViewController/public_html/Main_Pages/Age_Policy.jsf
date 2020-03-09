@@ -18,10 +18,9 @@
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                               <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
-                           
+                                <af:pageTemplate viewId="/Main_Pages/Setup_SideBar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt3">
@@ -30,7 +29,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
                                                     <af:panelTabbed position="above" id="pt2">
-                                                        <af:showDetailItem id="tab2" text="Age Info">
+                                                        <af:showDetailItem id="tab2">
                                                             <af:table value="#{bindings.TblAgePolicyView1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblAgePolicyView1.rangeSize}"
@@ -47,13 +46,12 @@
                                                                       partialTriggers="::b1 ::b2 ::b3">
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Age ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                                   id="id4" placeholder="Search Age ID">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Age ID" id="c1" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="id4"
+                                                                                      placeholder="Search Age ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblAgePolicyView1.hints.Id.label}"
                                                                                   required="#{bindings.TblAgePolicyView1.hints.Id.mandatory}"
@@ -68,13 +66,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.AcadYearId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Academic Year"
-                                                                           id="c2">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.AcadYearId}"
-                                                                                   id="it6" placeholder="Search Academic Year">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Academic Year" id="c2">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.AcadYearId}"
+                                                                                      id="it6"
+                                                                                      placeholder="Search Academic Year"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.AcadYearId.inputValue}"
                                                                                         label="#{row.bindings.AcadYearId.label}"
                                                                                         required="#{bindings.TblAgePolicyView1.hints.AcadYearId.mandatory}"
@@ -87,14 +84,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Date"
-                                                                           id="c3">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Dated}"
-                                                                                   id="it7" placeholder="Search Date">
-                                                                                   <af:convertDateTime pattern="#{bindings.TblAgePolicyView1.hints.Dated.format}"/>
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Date" id="c3">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Dated}"
+                                                                                      id="it7"
+                                                                                      placeholder="Search Date">
+                                                                            <af:convertDateTime pattern="#{bindings.TblAgePolicyView1.hints.Dated.format}"/>
+                                                                        </af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.Dated.inputValue}"
                                                                                   label="#{bindings.TblAgePolicyView1.hints.Dated.label}"
                                                                                   required="#{bindings.TblAgePolicyView1.hints.Dated.mandatory}"
@@ -107,13 +104,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.GradeId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Grade"
-                                                                           id="c4">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.GradeId}"
-                                                                                   id="it8" placeholder="Search Grade">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Grade" id="c4">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.GradeId}"
+                                                                                      id="it8"
+                                                                                      placeholder="Search Grade"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.GradeId.inputValue}"
                                                                                         label="#{row.bindings.GradeId.label}"
                                                                                         required="#{bindings.TblAgePolicyView1.hints.GradeId.mandatory}"
@@ -126,13 +122,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.FrYear.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="For Year"
-                                                                           id="c5">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.FrYear}"
-                                                                                   id="it9" placeholder="Search For Year">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="For Year" id="c5">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.FrYear}"
+                                                                                      id="it9"
+                                                                                      placeholder="Search For Year"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.FrYear.inputValue}"
                                                                                   label="#{bindings.TblAgePolicyView1.hints.FrYear.label}"
                                                                                   required="#{bindings.TblAgePolicyView1.hints.FrYear.mandatory}"
@@ -147,13 +142,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.ToYear.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="To Year"
-                                                                           id="c6">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.ToYear}"
-                                                                                   id="it10" placeholder="Search To Year">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="To Year" id="c6">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.ToYear}"
+                                                                                      id="it10"
+                                                                                      placeholder="Search To Year"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.ToYear.inputValue}"
                                                                                   label="#{bindings.TblAgePolicyView1.hints.ToYear.label}"
                                                                                   required="#{bindings.TblAgePolicyView1.hints.ToYear.mandatory}"
@@ -168,13 +162,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAgePolicyView1.hints.RefDocNo.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Ref Doc. No."
-                                                                           id="c7">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.ToYear}"
-                                                                                   id="it11" placeholder="Search Ref Doc. No.">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Ref Doc. No." id="c7">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.ToYear}"
+                                                                                      id="it11"
+                                                                                      placeholder="Search Ref Doc. No."></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.RefDocNo.inputValue}"
                                                                                   label="#{bindings.TblAgePolicyView1.hints.RefDocNo.label}"
                                                                                   required="#{bindings.TblAgePolicyView1.hints.RefDocNo.mandatory}"
@@ -185,13 +178,13 @@
                                                                         <f:validator binding="#{row.bindings.RefDocNo.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
-                                                                           id="c8" sortable="true" filterable="true">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                   id="it5" placeholder="Search Status">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                <af:column headerText="Active" id="c8" sortable="true"
+                                                                           filterable="true">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it5"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblAgePolicyView1.hints.Ast.mandatory}"
@@ -222,12 +215,10 @@
                                                         <af:spacer width="10" height="10" id="s3"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" icon="#{resource['images:delete.png']}"
-                                                                   disabled="#{!bindings.Delete.enabled}"
-                                                                   id="b3"/>
+                                                                   disabled="#{!bindings.Delete.enabled}" id="b3"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
-                                                                   disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b4"/>
+                                                                   disabled="#{!bindings.Commit.enabled}" id="b4"/>
                                                         <af:spacer width="10" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Rollback.execute}"
                                                                    text="Cancel" icon="#{resource['images:cancel.png']}"

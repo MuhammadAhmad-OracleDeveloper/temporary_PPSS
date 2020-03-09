@@ -10,17 +10,17 @@
                         <!-- Header -->
                         <af:pageTemplate viewId="Header.jsf" id="pt1">
                             <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>                    </af:gridCell>
+                        </af:pageTemplate>
+                    </af:gridCell>
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr1">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                               
-                           <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
+                                <af:pageTemplate viewId="/Main_Pages/Setup_SideBar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt4">
@@ -45,13 +45,12 @@
                                                                       varStatus="vs" id="t1">
                                                                 <af:column sortProperty="#{bindings.TblAcadYearView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Academic Year ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                                   id="id4" placeholder="Search ID">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Academic Year ID" id="c1"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="id4" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblAcadYearView1.hints.Id.label}"
                                                                                   required="#{bindings.TblAcadYearView1.hints.Id.mandatory}"
@@ -66,13 +65,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAcadYearView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Academic Year"
-                                                                           id="c2">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                   id="it11" placeholder="Search Name">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Academic Year" id="c2">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it11"
+                                                                                      placeholder="Search Name"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblAcadYearView1.hints.Name.label}"
                                                                                   required="#{bindings.TblAcadYearView1.hints.Name.mandatory}"
@@ -85,13 +83,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAcadYearView1.hints.StartDate.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Start Date"
-                                                                           id="c3">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.StartDate}"
-                                                                                   id="it12" placeholder="Search Start Date">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Start Date" id="c3">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.StartDate}"
+                                                                                      id="it12"
+                                                                                      placeholder="Search Start Date"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.StartDate.inputValue}"
                                                                                   label="#{bindings.TblAcadYearView1.hints.StartDate.label}"
                                                                                   required="#{bindings.TblAcadYearView1.hints.StartDate.mandatory}"
@@ -104,13 +101,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAcadYearView1.hints.EndDate.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="End Date"
-                                                                           id="c4">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.EndDate}"
-                                                                                   id="it13" placeholder="Search End Date">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="End Date" id="c4">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.EndDate}"
+                                                                                      id="it13"
+                                                                                      placeholder="Search End Date"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.EndDate.inputValue}"
                                                                                   label="#{bindings.TblAcadYearView1.hints.EndDate.label}"
                                                                                   required="#{bindings.TblAcadYearView1.hints.EndDate.mandatory}"
@@ -123,13 +119,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblAcadYearView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
-                                                                           id="c8">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                   id="it14" placeholder="Search Status">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Active" id="c8">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it14"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblAcadYearView1.hints.Ast.mandatory}"
@@ -172,13 +167,13 @@
                                                                       partialTriggers="::b9 ::b10 ::b11">
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Notice ID"
-                                                                           id="c5" align="center">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                                   id="it15" placeholder="Search Notice ID">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Notice ID" id="c5"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="it15"
+                                                                                      placeholder="Search Notice ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.Id.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.Id.mandatory}"
@@ -193,15 +188,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Show From"
-                                                                           id="c6">
-                                                                           
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
-                                                                                   id="it16" placeholder="Search Show From">
-                                                                                    <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Show From" id="c6">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                                                                      id="it16"
+                                                                                      placeholder="Search Show From">
+                                                                            <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
+                                                                        </af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.Dated.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.Dated.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.Dated.mandatory}"
@@ -214,13 +208,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.NoticeDesc.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Notice Description"
-                                                                           id="c7" align="center">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeDesc}"
-                                                                                   id="it17" placeholder="Search Notice Description">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Notice Description" id="c7"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeDesc}"
+                                                                                      id="it17"
+                                                                                      placeholder="Search Notice Description"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.NoticeDesc.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.NoticeDesc.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.NoticeDesc.mandatory}"
@@ -233,14 +227,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.StartDate.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Entery Date"
-                                                                           id="c9">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                                                                   id="it18" placeholder="Search Entery Date">
-                                                                                    <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Entery Date" id="c9">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
+                                                                                      id="it18"
+                                                                                      placeholder="Search Entery Date">
+                                                                            <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
+                                                                        </af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.StartDate.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.StartDate.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.StartDate.mandatory}"
@@ -253,14 +247,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.EndDate.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Show Upto"
-                                                                           id="c10">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                                                                   id="it19" placeholder="Search Show Upto">
-                                                                                    <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Show Upto" id="c10">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{bindings.TblNoticesView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
+                                                                                      id="it19"
+                                                                                      placeholder="Search Show Upto">
+                                                                            <af:convertDateTime pattern="#{bindings.TblNoticesView2.hints.Dated.format}"/>
+                                                                        </af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputDate value="#{row.bindings.EndDate.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.EndDate.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.EndDate.mandatory}"
@@ -273,13 +267,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblNoticesView2.hints.NoticeType.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Notice Type"
-                                                                           id="c11">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeType}"
-                                                                                   id="it23" placeholder="Search Notice Type">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                           headerText="Notice Type" id="c11">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeType}"
+                                                                                      id="it23"
+                                                                                      placeholder="Search Notice Type"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.NoticeType.inputValue}"
                                                                                   label="#{bindings.TblNoticesView2.hints.NoticeType.label}"
                                                                                   required="#{bindings.TblNoticesView2.hints.NoticeType.mandatory}"
@@ -290,14 +283,14 @@
                                                                         <f:validator binding="#{row.bindings.NoticeType.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Notice Teacher"
-                                                                           id="c12" align="center" sortable="true"
+                                                                <af:column headerText="Notice Teacher" id="c12"
+                                                                           align="center" sortable="true"
                                                                            filterable="true">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeTeacher}"
-                                                                                   id="it6" placeholder="Search Notice Teacher">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeTeacher}"
+                                                                                      id="it6"
+                                                                                      placeholder="Search Notice Teacher"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.NoticeTeacher.inputValue}"
                                                                                         label="#{row.bindings.NoticeTeacher.label}"
                                                                                         required="#{bindings.TblNoticesView2.hints.NoticeTeacher.mandatory}"
@@ -308,14 +301,14 @@
                                                                         <f:validator binding="#{row.bindings.NoticeTeacher.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Notice All"
-                                                                           id="c13" align="center" sortable="true"
+                                                                <af:column headerText="Notice All" id="c13"
+                                                                           align="center" sortable="true"
                                                                            filterable="true">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeAll}"
-                                                                                   id="it7" placeholder="Search Notice All">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeAll}"
+                                                                                      id="it7"
+                                                                                      placeholder="Search Notice All"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.NoticeAll.inputValue}"
                                                                                         label="#{row.bindings.NoticeAll.label}"
                                                                                         required="#{bindings.TblNoticesView2.hints.NoticeAll.mandatory}"
@@ -326,14 +319,14 @@
                                                                         <f:validator binding="#{row.bindings.NoticeAll.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Notice Parent"
-                                                                           id="c14" align="center" sortable="true"
+                                                                <af:column headerText="Notice Parent" id="c14"
+                                                                           align="center" sortable="true"
                                                                            filterable="true">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeParent}"
-                                                                                   id="it8" placeholder="Search Notice Parent">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeParent}"
+                                                                                      id="it8"
+                                                                                      placeholder="Search Notice Parent"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.NoticeParent.inputValue}"
                                                                                         label="#{row.bindings.NoticeParent.label}"
                                                                                         required="#{bindings.TblNoticesView2.hints.NoticeParent.mandatory}"
@@ -344,14 +337,14 @@
                                                                         <f:validator binding="#{row.bindings.NoticeParent.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Notice Student"
-                                                                           id="c15" align="center" sortable="true"
+                                                                <af:column headerText="Notice Student" id="c15"
+                                                                           align="center" sortable="true"
                                                                            filterable="true">
-                                                                           <f:facet name="filter">
-                                                                                  <af:inputText value="#{vs.filterCriteria.NoticeStudent}"
-                                                                                   id="it9" placeholder="Search Notice Student">
-                                                                                  </af:inputText>
-                                                                            </f:facet>
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.NoticeStudent}"
+                                                                                      id="it9"
+                                                                                      placeholder="Search Notice Student"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.NoticeStudent.inputValue}"
                                                                                         label="#{row.bindings.NoticeStudent.label}"
                                                                                         required="#{bindings.TblNoticesView2.hints.NoticeStudent.mandatory}"
@@ -386,22 +379,25 @@
                                                     <af:panelGroupLayout id="pgl4"/>
                                                     <af:spacer width="50" height="10" id="s8"/>
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9" icon="#{resource['images:add.png']}"/>
+                                                               text="Add" disabled="#{!bindings.CreateInsert.enabled}"
+                                                               id="b9" icon="#{resource['images:add.png']}"/>
                                                     <af:spacer width="10" height="10" id="s11"/>
-                                                    <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b10" icon="#{resource['images:edit.png']}"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}" text="Edit"
+                                                               disabled="#{!bindings.Execute.enabled}" id="b10"
+                                                               icon="#{resource['images:edit.png']}"/>
                                                     <af:spacer width="10" height="10" id="s12"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b11" icon="#{resource['images:delete.png']}"/>
+                                                               disabled="#{!bindings.Delete.enabled}" id="b11"
+                                                               icon="#{resource['images:delete.png']}"/>
                                                     <af:spacer width="10" height="10" id="s9"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b12" icon="#{resource['images:save.png']}"/>
+                                                               disabled="#{!bindings.Commit.enabled}" id="b12"
+                                                               icon="#{resource['images:save.png']}"/>
                                                     <af:spacer width="10" height="10" id="s10"/>
                                                     <af:button actionListener="#{bindings.Rollback.execute}"
                                                                text="Cancel" disabled="#{!bindings.Rollback.enabled}"
-                                                               immediate="true" id="b13" icon="#{resource['images:cancel.png']}">
+                                                               immediate="true" id="b13"
+                                                               icon="#{resource['images:cancel.png']}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:gridCell>

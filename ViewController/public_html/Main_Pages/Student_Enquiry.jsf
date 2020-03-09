@@ -18,10 +18,9 @@
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                               <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
-                           
+                                <af:pageTemplate viewId="/Main_Pages/Student_Sidebar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt4">
@@ -47,13 +46,12 @@
                                                                       partialTriggers="::b1 ::b2 ::b3 ::b6 ::b7 ::b8 ::b9">
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Enquiry ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                               id="id4" placeholder="Search ID">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Enquiry ID" id="c1"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="id4" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.Id.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.Id.mandatory}"
@@ -68,9 +66,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Date"
-                                                                           id="c2">
-                                                                           
+                                                                           headerText="Date" id="c2">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblStdEnqView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                                       id="id1">
@@ -89,13 +85,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.AcadYearId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Academic Year"
-                                                                           id="c3">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.AcadYearId}"
-                                                                               id="it38" placeholder="Search Academic Year">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Academic Year" id="c3">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.AcadYearId}"
+                                                                                      id="it38"
+                                                                                      placeholder="Search Academic Year"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.AcadYearId.inputValue}"
                                                                                         label="#{row.bindings.AcadYearId.label}"
                                                                                         required="#{bindings.TblStdEnqView1.hints.AcadYearId.mandatory}"
@@ -108,13 +103,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.FirstName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="First Name"
-                                                                           id="c4">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.FirstName}"
-                                                                               id="it39" placeholder="Search First Name">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="First Name" id="c4">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.FirstName}"
+                                                                                      id="it39"
+                                                                                      placeholder="Search First Name"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.FirstName.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.FirstName.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.FirstName.mandatory}"
@@ -127,13 +121,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.LastName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Last Name"
-                                                                           id="c7">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.LastName}"
-                                                                               id="it40" placeholder="Search Last Name">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Last Name" id="c7">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.LastName}"
+                                                                                      id="it40"
+                                                                                      placeholder="Search Last Name"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.LastName.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.LastName.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.LastName.mandatory}"
@@ -146,13 +139,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.GradeId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Grade"
-                                                                           id="c8">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.GradeId}"
-                                                                               id="it41" placeholder="Search Grade">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Grade" id="c8">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.GradeId}"
+                                                                                      id="it41"
+                                                                                      placeholder="Search Grade"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.GradeId.inputValue}"
                                                                                         label="#{row.bindings.GradeId.label}"
                                                                                         required="#{bindings.TblStdEnqView1.hints.GradeId.mandatory}"
@@ -165,13 +157,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Gender.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Gender"
-                                                                           id="c9">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Gender}"
-                                                                               id="it42" placeholder="Search Gender">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Gender" id="c9">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Gender}"
+                                                                                      id="it42"
+                                                                                      placeholder="Search Gender"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Gender.inputValue}"
                                                                                   label="#{bindings.TblStdEnqView1.hints.Gender.label}"
                                                                                   required="#{bindings.TblStdEnqView1.hints.Gender.mandatory}"
@@ -184,8 +175,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblStdEnqView1.hints.Dob.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Date Of Birth"
-                                                                           id="c10">
+                                                                           headerText="Date Of Birth" id="c10">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblStdEnqView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dob.value}"
                                                                                       id="id3">
@@ -213,25 +203,26 @@
                                                         <af:spacer width="400" height="10" id="s1"/>
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
-                                                                   disabled="#{!bindings.CreateInsert.enabled}"
-                                                                   id="b1"/>
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b1"
+                                                                   icon="#{resource['images:add.png']}"/>
                                                         <af:spacer width="10" height="10" id="s2"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                                   text="Edit"
-                                                                   disabled="#{!bindings.Execute.enabled}" id="b2"/>
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   id="b2" icon="#{resource['images:edit.png']}"/>
                                                         <af:spacer width="10" height="10" id="s3"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
-                                                                   id="b3"/>
+                                                                   id="b3" icon="#{resource['images:delete.png']}"/>
                                                         <af:spacer width="10" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b4"/>
+                                                                   id="b4" icon="#{resource['images:save.png']}"/>
                                                         <af:spacer width="10" height="10" id="s5"/>
                                                         <af:button actionListener="#{bindings.Rollback.execute}"
                                                                    text="Cancel"
                                                                    disabled="#{!bindings.Rollback.enabled}"
-                                                                   immediate="true" id="b5">
+                                                                   immediate="true" id="b5"
+                                                                   icon="#{resource['images:cancel.png']}">
                                                             <af:resetActionListener/>
                                                         </af:button>
                                                     </af:panelGroupLayout>
@@ -243,7 +234,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3">
-                                                        <af:showDetailItem id="tab3" text="Student Enquiry">
+                                                        <af:showDetailItem id="tab3" text="Basic Info">
                                                             <af:panelGroupLayout id="pgl3"/>
                                                             <af:panelFormLayout id="pfl1">
                                                                 <af:inputDate value="#{bindings.TotAge.inputValue}"
@@ -251,7 +242,7 @@
                                                                               required="#{bindings.TotAge.hints.mandatory}"
                                                                               columns="#{bindings.TotAge.hints.displayWidth}"
                                                                               shortDesc="#{bindings.TotAge.hints.tooltip}"
-                                                                              id="id5">
+                                                                              id="id5" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.TotAge.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.TotAge.format}"/>
                                                                 </af:inputDate>
@@ -261,8 +252,7 @@
                                                                               columns="#{bindings.ConPerson.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ConPerson.hints.precision}"
                                                                               shortDesc="#{bindings.ConPerson.hints.tooltip}"
-                                                                              id="it4">
-                                                                              
+                                                                              id="it4" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.ConPerson.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ContactNumber.inputValue}"
@@ -271,7 +261,7 @@
                                                                               columns="#{bindings.ContactNumber.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ContactNumber.hints.precision}"
                                                                               shortDesc="#{bindings.ContactNumber.hints.tooltip}"
-                                                                              id="it6">
+                                                                              id="it6" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.ContactNumber.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ContactRelation.inputValue}"
@@ -280,7 +270,7 @@
                                                                               columns="#{bindings.ContactRelation.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ContactRelation.hints.precision}"
                                                                               shortDesc="#{bindings.ContactRelation.hints.tooltip}"
-                                                                              id="it7">
+                                                                              id="it7" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.ContactRelation.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Address.inputValue}"
@@ -289,7 +279,7 @@
                                                                               columns="#{bindings.Address.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Address.hints.precision}"
                                                                               shortDesc="#{bindings.Address.hints.tooltip}"
-                                                                              id="it10">
+                                                                              id="it10" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.Address.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Emirates.inputValue}"
@@ -298,7 +288,7 @@
                                                                               columns="#{bindings.Emirates.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Emirates.hints.precision}"
                                                                               shortDesc="#{bindings.Emirates.hints.tooltip}"
-                                                                              id="it11">
+                                                                              id="it11" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.Emirates.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.EmArea.inputValue}"
@@ -307,7 +297,7 @@
                                                                               columns="#{bindings.EmArea.hints.displayWidth}"
                                                                               maximumLength="#{bindings.EmArea.hints.precision}"
                                                                               shortDesc="#{bindings.EmArea.hints.tooltip}"
-                                                                              id="it12">
+                                                                              id="it12" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.EmArea.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Ast.inputValue}"
@@ -316,11 +306,9 @@
                                                                               columns="#{bindings.Ast.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Ast.hints.precision}"
                                                                               shortDesc="#{bindings.Ast.hints.tooltip}"
-                                                                              id="it37">
+                                                                              id="it37" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.Ast.validator}"/>
                                                                 </af:inputText>
-                                                                
-                                                                
                                                                 <f:facet name="footer">
                                                                     <af:panelGroupLayout layout="horizontal" id="pgl4">
                                                                         <af:button actionListener="#{bindings.First.execute}"

@@ -19,6 +19,7 @@
     <page path="/Main_Pages/Student_Enquiry.jsf" usageId="view_Student_EnquiryPageDef"/>
     <page path="/Main_Pages/Age_Policy.jsf" usageId="view_Age_PolicyPageDef"/>
     <page path="/Main_Pages/Follow_Up.jsf" usageId="view_Follow_UpPageDef"/>
+    <page path="/Main_Pages/Student_Registration.jsf" usageId="view_Student_RegistrationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_Academic_YearPageDef" path="Main_Pages.Academic_YearPageDef"/>
@@ -38,6 +39,7 @@
     <page id="view_Student_EnquiryPageDef" path="Main_Pages.Student_EnquiryPageDef"/>
     <page id="view_Age_PolicyPageDef" path="Main_Pages.Age_PolicyPageDef"/>
     <page id="view_Follow_UpPageDef" path="Main_Pages.Follow_UpPageDef"/>
+    <page id="view_Student_RegistrationPageDef" path="Main_Pages.Student_RegistrationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

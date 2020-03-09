@@ -18,9 +18,9 @@
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                            <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
+                                <af:pageTemplate viewId="/Main_Pages/Setup_SideBar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt4">
@@ -45,34 +45,31 @@
                                                                       varStatus="vs" id="t1">
                                                                 <af:column sortProperty="#{bindings.TblTermsView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Terms ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.Id}"
-                                          id="id4" placeholder="Search ID">
-                           </af:inputText>
-                             </f:facet>
-
-
+                                                                           headerText="Terms ID" id="c1" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="id4" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblTermsView1.hints.Id.label}"
                                                                                   required="#{bindings.TblTermsView1.hints.Id.mandatory}"
                                                                                   columns="#{bindings.TblTermsView1.hints.Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTermsView1.hints.Id.precision}"
                                                                                   shortDesc="#{bindings.TblTermsView1.hints.Id.tooltip}"
-                                                                                  id="it1" readOnly="true"  contentStyle='text-align: center'>
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align: center'>
                                                                         <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblTermsView1.hints.Id.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Academic Year"
-                                                                           id="c6" sortable="true" filterable="true">
-                                                                            <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.AcadYearId}"
-                                          id="it6" placeholder="Search Year">
-                           </af:inputText>
-                             </f:facet>
+                                                                <af:column headerText="Academic Year" id="c6"
+                                                                           sortable="true" filterable="true">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.AcadYearId}"
+                                                                                      id="it6"
+                                                                                      placeholder="Search Year"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.AcadYearId.inputValue}"
                                                                                         label="#{row.bindings.AcadYearId.label}"
                                                                                         required="#{bindings.TblTermsView1.hints.AcadYearId.mandatory}"
@@ -85,13 +82,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblTermsView1.hints.TermName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Terms"
-                                                                           id="c3" width="200">
-                                                                            <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.TermName}"
-                                          id="it7" placeholder="Search Terms">
-                           </af:inputText>
-                             </f:facet>
+                                                                           headerText="Terms" id="c3" width="200">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.TermName}"
+                                                                                      id="it7"
+                                                                                      placeholder="Search Terms"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.TermName.inputValue}"
                                                                                   label="#{bindings.TblTermsView1.hints.TermName.label}"
                                                                                   required="#{bindings.TblTermsView1.hints.TermName.mandatory}"
@@ -102,13 +98,13 @@
                                                                         <f:validator binding="#{row.bindings.TermName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
-                                                                           id="c4" sortable="true" filterable="true">
-                                                                             <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.Ast}"
-                                          id="it4" placeholder="Search Status">
-                           </af:inputText>
-                             </f:facet>
+                                                                <af:column headerText="Active" id="c4" sortable="true"
+                                                                           filterable="true">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it4"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblTermsView1.hints.Ast.mandatory}"
@@ -150,13 +146,11 @@
                                                                       varStatus="vs" id="t2">
                                                                 <af:column sortProperty="#{bindings.TblTermWorkDaysView4.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Days ID"
-                                                                           id="c2" align="center">
-                                                                            <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.Id}"
-                                          id="it8" placeholder="Search ID">
-                           </af:inputText>
-                             </f:facet>
+                                                                           headerText="Days ID" id="c2" align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="it8" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblTermWorkDaysView4.hints.Id.label}"
                                                                                   required="#{bindings.TblTermWorkDaysView4.hints.Id.mandatory}"
@@ -164,7 +158,7 @@
                                                                                   maximumLength="#{bindings.TblTermWorkDaysView4.hints.Id.precision}"
                                                                                   shortDesc="#{bindings.TblTermWorkDaysView4.hints.Id.tooltip}"
                                                                                   id="it2" readOnly="true"
-                                  contentStyle='text-align: center'>
+                                                                                  contentStyle='text-align: center'>
                                                                         <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblTermWorkDaysView4.hints.Id.format}"/>
@@ -172,20 +166,21 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblTermWorkDaysView4.hints.WorkDays.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Work Days"
-                                                                           id="c5" align="center">
-                                                                           <f:facet name="filter">
-                                          <af:inputText value="#{vs.filterCriteria.WorkDays}"
-                                          id="it9" placeholder="Search Work Days">
-                           </af:inputText>
-                             </f:facet>
+                                                                           headerText="Work Days" id="c5"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.WorkDays}"
+                                                                                      id="it9"
+                                                                                      placeholder="Search Work Days"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.WorkDays.inputValue}"
                                                                                   label="#{bindings.TblTermWorkDaysView4.hints.WorkDays.label}"
                                                                                   required="#{bindings.TblTermWorkDaysView4.hints.WorkDays.mandatory}"
                                                                                   columns="#{bindings.TblTermWorkDaysView4.hints.WorkDays.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTermWorkDaysView4.hints.WorkDays.precision}"
                                                                                   shortDesc="#{bindings.TblTermWorkDaysView4.hints.WorkDays.tooltip}"
-                                                                                  id="it5" contentStyle='text-align: center'>
+                                                                                  id="it5"
+                                                                                  contentStyle='text-align: center'>
                                                                         <f:validator binding="#{row.bindings.WorkDays.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblTermWorkDaysView4.hints.WorkDays.format}"/>
@@ -201,13 +196,12 @@
                                                     <af:panelGroupLayout id="pgl4"/>
                                                     <af:spacer width="150" height="10" id="s8"/>
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b8"
-                                                               icon="#{resource['images:add.png']}"/>
+                                                               text="Add" disabled="#{!bindings.CreateInsert.enabled}"
+                                                               id="b8" icon="#{resource['images:add.png']}"/>
                                                     <af:spacer width="10" height="10" id="s10"/>
-                                                    <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b9" icon="#{resource['images:edit.png']}"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}" text="Edit"
+                                                               disabled="#{!bindings.Execute.enabled}" id="b9"
+                                                               icon="#{resource['images:edit.png']}"/>
                                                     <af:spacer width="10" height="10" id="s9"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b10"

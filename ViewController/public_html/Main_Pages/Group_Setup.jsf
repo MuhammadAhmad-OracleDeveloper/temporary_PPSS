@@ -18,10 +18,9 @@
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                               <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
-                           
+                                <af:pageTemplate viewId="/Main_Pages/Setup_SideBar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt1">
@@ -47,20 +46,19 @@
                                                                       partialTriggers="::b3 ::b4 ::b7">
                                                                 <af:column sortProperty="#{bindings.TblGroupView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Group ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
+                                                                           headerText="Group ID" id="c1" align="center">
+                                                                    <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                            id="id4" placeholder="Search ID">
-                                                                            </af:inputText>
-                                                                            </f:facet>
+                                                                                      id="id4" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblGroupView1.hints.Id.label}"
                                                                                   required="#{bindings.TblGroupView1.hints.Id.mandatory}"
                                                                                   columns="#{bindings.TblGroupView1.hints.Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblGroupView1.hints.Id.precision}"
                                                                                   shortDesc="#{bindings.TblGroupView1.hints.Id.tooltip}"
-                                                                                  id="it1" readOnly="true"  contentStyle='text-align: center'>
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align: center'>
                                                                         <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblGroupView1.hints.Id.format}"/>
@@ -68,13 +66,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGroupView1.hints.GroupName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Group"
-                                                                           id="c2" width="200">
-                                                                             <f:facet name="filter">
+                                                                           headerText="Group" id="c2" width="200">
+                                                                    <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.GroupName}"
-                                                                            id="it4" placeholder="Search Group">
-                                                                            </af:inputText>
-                                                                            </f:facet>
+                                                                                      id="it4"
+                                                                                      placeholder="Search Group"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.GroupName.inputValue}"
                                                                                   label="#{bindings.TblGroupView1.hints.GroupName.label}"
                                                                                   required="#{bindings.TblGroupView1.hints.GroupName.mandatory}"
@@ -85,13 +82,13 @@
                                                                         <f:validator binding="#{row.bindings.GroupName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
-                                                                           id="c3" sortable="true" filterable="true">
-                                                                            <f:facet name="filter">
+                                                                <af:column headerText="Active" id="c3" sortable="true"
+                                                                           filterable="true">
+                                                                    <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                            id="it3" placeholder="Search Status">
-                                                                            </af:inputText>
-                                                                            </f:facet>
+                                                                                      id="it3"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblGroupView1.hints.Ast.mandatory}"
@@ -113,13 +110,12 @@
                                                         <af:spacer width="100" height="10" id="s8"/>
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
-                                                                   disabled="#{!bindings.CreateInsert.enabled}"
-                                                                   id="b10" icon="#{resource['images:add.png']}"/>
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b10"
+                                                                   icon="#{resource['images:add.png']}"/>
                                                         <af:spacer width="10" height="10" id="s9"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                                   text="Edit"
-                                                                   disabled="#{!bindings.Execute.enabled}" id="b11"
-                                                                   icon="#{resource['images:edit.png']}"/>
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   id="b11" icon="#{resource['images:edit.png']}"/>
                                                         <af:spacer width="10" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"

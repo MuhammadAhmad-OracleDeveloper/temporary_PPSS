@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>Student_Sidebar</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelAccordion discloseMany="false" id="pa4" inlineStyle=" width: 210px; ">
+        <af:showDetailItem id="tab1" text="Menu">
+            <af:spacer width="50" height="10" id="pt_s4"/>
+            <af:button text="Student Enquiry" id="pt_b4" inlineStyle="width:200px;text-align:center "
+                       action="Student_Enquiry.jsf"/>
+            <af:spacer width="50" height="10" id="pt_s7"/>
+            <af:button text="Student Registeration" id="pt_b7" inlineStyle="width:200px;text-align:center "
+                       action="Student_Registration.jsf"/>
+        </af:showDetailItem>
+    </af:panelAccordion>
+</af:pageTemplateDef>
+

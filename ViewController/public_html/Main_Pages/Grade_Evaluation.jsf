@@ -18,10 +18,9 @@
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                               <af:pageTemplate viewId="SideBar.jsf" id="pt5">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
-                           
+                                <af:pageTemplate viewId="/Main_Pages/Setup_SideBar.jsf" id="pt5">
+                                    <?audit suppress oracle.adf.faces.pt-type-not-found?>
+                                </af:pageTemplate>
                             </f:facet>
                             <f:facet name="second">
                                 <af:panelTabbed position="above" id="pt4">
@@ -46,13 +45,12 @@
                                                                       varStatus="vs" id="t1">
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Grade Evaluation ID"
-                                                                           id="c1" align="center">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Id}"
-                                                                               id="id4" placeholder="Search ID">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Grade Evaluation ID" id="c1"
+                                                                           align="center">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                                      id="id4" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.Id.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.Id.mandatory}"
@@ -67,13 +65,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.GradeId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Grade"
-                                                                           id="c2">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.GradeId}"
-                                                                               id="it10" placeholder="Search Grade Name">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Grade" id="c2">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.GradeId}"
+                                                                                      id="it10"
+                                                                                      placeholder="Search Grade Name"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.GradeId.inputValue}"
                                                                                         label="#{row.bindings.GradeId.label}"
                                                                                         required="#{bindings.TblGradeEvaluationView1.hints.GradeId.mandatory}"
@@ -86,13 +83,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.TermId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Term"
-                                                                           id="c3">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.TermId}"
-                                                                               id="it11" placeholder="Search Term Name">
-                                                                              </af:inputText>
-                                                                        </f:facet>
+                                                                           headerText="Term" id="c3">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.TermId}"
+                                                                                      id="it11"
+                                                                                      placeholder="Search Term Name"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.TermId.inputValue}"
                                                                                         label="#{row.bindings.TermId.label}"
                                                                                         required="#{bindings.TblGradeEvaluationView1.hints.TermId.mandatory}"
@@ -105,13 +101,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.InfoEvaluation.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Evaluation"
-                                                                           id="c4">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.InfoEvaluation}"
-                                                                               id="it12" placeholder="Search Evaluation">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Evaluation" id="c4">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.InfoEvaluation}"
+                                                                                      id="it12"
+                                                                                      placeholder="Search Evaluation"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.InfoEvaluation.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.InfoEvaluation.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.InfoEvaluation.mandatory}"
@@ -126,13 +121,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic1.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Topics 1"
-                                                                           id="c5">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.InfoDTopic1}"
-                                                                               id="it13" placeholder="Search Topic 1">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Topics 1" id="c5">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.InfoDTopic1}"
+                                                                                      id="it13"
+                                                                                      placeholder="Search Topic 1"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.InfoDTopic1.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic1.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic1.mandatory}"
@@ -147,13 +141,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.Topic1Marks.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Marks 1"
-                                                                           id="c6">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Topic1Marks}"
-                                                                               id="it14" placeholder="Search Marks 1">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Marks 1" id="c6">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Topic1Marks}"
+                                                                                      id="it14"
+                                                                                      placeholder="Search Marks 1"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Topic1Marks.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.Topic1Marks.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.Topic1Marks.mandatory}"
@@ -168,13 +161,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic2.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Topics 2"
-                                                                           id="c7">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.InfoDTopic2}"
-                                                                               id="it15" placeholder="Search Topic 2">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Topics 2" id="c7">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.InfoDTopic2}"
+                                                                                      id="it15"
+                                                                                      placeholder="Search Topic 2"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.InfoDTopic2.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic2.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.InfoDTopic2.mandatory}"
@@ -189,13 +181,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.Topic2Marks.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Marks 2"
-                                                                           id="c8">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Topic2Marks}"
-                                                                               id="it16" placeholder="Search Marks 2">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Marks 2" id="c8">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Topic2Marks}"
+                                                                                      id="it16"
+                                                                                      placeholder="Search Marks 2"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Topic2Marks.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.Topic2Marks.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.Topic2Marks.mandatory}"
@@ -210,13 +201,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.EvaType.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Type"
-                                                                           id="c9">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.EvaType}"
-                                                                               id="it17" placeholder="Search Type">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Type" id="c9">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.EvaType}"
+                                                                                      id="it17"
+                                                                                      placeholder="Search Type"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.EvaType.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.EvaType.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.EvaType.mandatory}"
@@ -229,13 +219,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.TotalMarks.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Total"
-                                                                           id="c10">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.TotalMarks}"
-                                                                               id="it18" placeholder="Search Total">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Total" id="c10">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.TotalMarks}"
+                                                                                      id="it18"
+                                                                                      placeholder="Search Total"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.TotalMarks.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.TotalMarks.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.TotalMarks.mandatory}"
@@ -250,13 +239,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblGradeEvaluationView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
-                                                                           id="c11">
-                                                                           <f:facet name="filter">
-                                                                              <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                               id="it19" placeholder="Search Status">
-                                                                              </af:inputText>
-                                                                              </f:facet>
+                                                                           headerText="Active" id="c11">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it19"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Ast.inputValue}"
                                                                                   label="#{bindings.TblGradeEvaluationView1.hints.Ast.label}"
                                                                                   required="#{bindings.TblGradeEvaluationView1.hints.Ast.mandatory}"
@@ -285,30 +273,24 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                                                     <af:panelGroupLayout id="pgl4"/>
                                                     <af:spacer width="50" height="10" id="s8"/>
-                                                    <af:button
-                                                               text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9"
-                                                               icon="#{resource['images:add.png']}"
+                                                    <af:button text="Add" disabled="#{!bindings.CreateInsert.enabled}"
+                                                               id="b9" icon="#{resource['images:add.png']}"
                                                                actionListener="#{bindings.CreateInsert.execute}"/>
                                                     <af:spacer width="10" height="10" id="s9"/>
-                                                    <af:button
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                    <af:button text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b10" icon="#{resource['images:edit.png']}"
                                                                actionListener="#{bindings.Execute.execute}"/>
                                                     <af:spacer width="10" height="10" id="s10"/>
-                                                    <af:button text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b11"
-                                                               icon="#{resource['images:delete.png']}"
+                                                    <af:button text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                               id="b11" icon="#{resource['images:delete.png']}"
                                                                actionListener="#{bindings.Delete.execute}"/>
                                                     <af:spacer width="10" height="10" id="s11"/>
-                                                    <af:button text="Save"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b12"
-                                                               icon="#{resource['images:save.png']}"
+                                                    <af:button text="Save" disabled="#{!bindings.Commit.enabled}"
+                                                               id="b12" icon="#{resource['images:save.png']}"
                                                                actionListener="#{bindings.Commit.execute}"/>
                                                     <af:spacer width="10" height="10" id="s12"/>
-                                                    <af:button
-                                                               text="Cancel" disabled="#{!bindings.Rollback.enabled}" id="b13"
-                                                               icon="#{resource['images:cancel.png']}"
+                                                    <af:button text="Cancel" disabled="#{!bindings.Rollback.enabled}"
+                                                               id="b13" icon="#{resource['images:cancel.png']}"
                                                                actionListener="#{bindings.Rollback.execute}"
                                                                immediate="true">
                                                         <af:resetActionListener/>

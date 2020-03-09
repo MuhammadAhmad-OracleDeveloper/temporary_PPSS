@@ -3,17 +3,14 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Dashboard.jsf" id="d1">
         <af:form id="f1">
-                     
-                <af:pageTemplate viewId="Header.jsf" id="pt1">
-                            <?audit suppress oracle.adf.faces.pt-type-not-found?>
-                        </af:pageTemplate>
-                <af:panelGridLayout id="pgl1">
+            <af:pageTemplate viewId="Header.jsf" id="pt1">
+                <?audit suppress oracle.adf.faces.pt-type-not-found?>
+            </af:pageTemplate>
+            <af:panelGridLayout id="pgl1">
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="34%" id="gc1"/>
-                    
                     <af:gridCell marginStart="5px" width="33%" id="gc2"/>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
-                    
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr3">
                     <af:gridCell marginStart="5px" width="34%" id="gc7">
@@ -21,8 +18,9 @@
                                  text="Setups" iconPosition="bottom" inlineStyle="font-size:large;"/>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" id="gc8">
-                        <af:link id="l2" icon="#{resource['images:dash_training.png']}" destination="Setups.jsf"
-                                 text="Student Registeration" iconPosition="bottom" inlineStyle="font-size:large;"/>
+                        <af:link id="l2" icon="#{resource['images:dash_training.png']}"
+                                 destination="Student_Registration_Menu.jsf" text="Student Registeration"
+                                 iconPosition="bottom" inlineStyle="font-size:large;"/>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
                 </af:gridRow>
